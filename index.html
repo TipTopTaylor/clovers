@@ -1,1293 +1,1985 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The 4 Leaf Clover Store | Genuine Hand-Picked Four-Leaf Clovers</title>
-  
-  <!-- SEO Meta Tags -->
-  <meta name="p:domain_verify" content="19a1ea7a495bdb38fa76f05ad4e532e6"/>
-  <meta name="description" content="Discover genuine hand-picked four-leaf clovers, jewelry, and rare finds. Each clover is carefully preserved to bring authentic good luck, perfect for gifts or personal charms.">
-  <meta name="keywords" content="four leaf clover, 4 leaf clover, genuine four leaf clovers, lucky clover, clover jewelry, rare clovers, good luck charms">
-  <meta name="author" content="The 4 Leaf Clover Store">
-  
-  <!-- Open Graph Tags for social sharing -->
-  <meta property="og:title" content="The 4 Leaf Clover Store | Genuine Hand-Picked Four-Leaf Clovers">
-  <meta property="og:description" content="Discover genuine hand-picked four-leaf clovers, jewelry, and rare finds. Each clover is carefully preserved to bring authentic good luck.">
-  <meta property="og:image" content="https://yourdomain.com/Website-Title.png">
-  <meta property="og:url" content="https://yourdomain.com">
-  <meta property="og:type" content="website">
-  
-  <!-- Twitter Card data -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The 4 Leaf Clover Store | Genuine Hand-Picked Four-Leaf Clovers">
-  <meta name="twitter:description" content="Discover genuine hand-picked four-leaf clovers, jewelry, and rare finds for authentic good luck.">
-  <meta name="twitter:image" content="https://yourdomain.com/Website-Title.png">
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://yourdomain.com">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
-  <!-- Structured data (Schema.org) for Rich Snippets -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Store",
-    "name": "The 4 Leaf Clover Store",
-    "description": "Genuine hand-picked four-leaf clovers, jewelry, and rare finds",
-    "image": "https://yourdomain.com/Website-Title.png",
-    "url": "https://yourdomain.com",
-    "telephone": "",
-    "address": {
-      "@type": "PostalAddress",
-      "addressRegion": "Ontario",
-      "addressCountry": "Canada"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "",
-      "longitude": ""
-    },
-    "priceRange": "$10-$45",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "17:00"
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>The 4 Leaf Clover Store — Genuine Hand-Picked Four-Leaf Clovers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FBF9F2;
+    --cream-2: #F4F0E4;
+    --ink: #23301F;
+    --ink-soft: #55604C;
+    --clover: #1E7A3D;
+    --clover-deep: #24513A;
+    --clover-pale: #E4EEE0;
+    --line: #DED8C4;
+    --badge-rare: #8F5FA8;
+    --badge-new: #C98A2C;
+    --radius: 14px;
+    --maxw: 1180px;
+  }
+  :root:not([data-theme="light"]) {
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(92px + env(safe-area-inset-top, 0px)); }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .display {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .wordmark {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 800;
+  }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- header ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--clover-deep);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding-top: env(safe-area-inset-top, 0px);
+    display: flex;
+    align-items: stretch;
+  }
+  .brand-zone {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    background: #fff;
+    padding: 0 28px;
+  }
+  .header-inner {
+    flex: 1;
+    min-width: 0;
+    max-width: calc(var(--maxw) - 1px);
+    margin: 0 auto;
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .brand-logo-img {
+    height: 54px;
+    width: auto;
+    flex-shrink: 0;
+    transition: transform .25s ease;
+  }
+  .brand:hover .brand-logo-img {
+    transform: scale(1.08);
+  }
+  nav.mainnav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  nav.mainnav button.navlink {
+    font-family: 'Inter', sans-serif;
+    background: none;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #CFE0D2;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color .2s, background .2s;
+  }
+  nav.mainnav button.navlink:hover { color: #fff; background: rgba(255,255,255,0.1); }
+  nav.mainnav button.navlink[aria-current="page"] { color: #fff; font-weight: 700; }
+  .cta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--clover);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    white-space: nowrap;
+    transition: background .2s, transform .2s;
+  }
+  .cta-pill:hover { background: var(--clover-deep); transform: translateY(-1px); }
+  .cta-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: var(--ink);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    border: 1.5px solid var(--line);
+    white-space: nowrap;
+    transition: border-color .2s, background .2s;
+  }
+  .cta-outline:hover { border-color: var(--clover); background: var(--clover-pale); }
+  .header-inner .nav-cta {
+    color: #fff;
+    border-color: rgba(255,255,255,0.5);
+  }
+  .header-inner .nav-cta:hover {
+    border-color: #fff;
+    background: rgba(255,255,255,0.12);
+  }
+  .mobile-only-link { display: none; text-decoration: none; }
+  .menu-toggle {
+    display: none;
+    background: none;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.45);
+    border-radius: 8px;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  /* ---------- page sections (routed) ---------- */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 76px 0 90px;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -18%;
+    left: -12%;
+    width: 560px;
+    height: 560px;
+    background-image: url('pattern.png');
+    background-size: 220px;
+    background-repeat: repeat;
+    opacity: 0.22;
+    -webkit-mask-image: radial-gradient(circle at 35% 35%, black, transparent 68%);
+    mask-image: radial-gradient(circle at 35% 35%, black, transparent 68%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .eyebrow-clover {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 18px;
+    background: var(--clover-deep);
+    padding: 7px 16px 7px 12px;
+    border-radius: 20px;
+  }
+  .eyebrow-clover svg { width: 16px; height: 16px; }
+  .hero h1 {
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+    line-height: 1.08;
+    margin: 0 0 22px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--clover);
+  }
+  .hero p.lede {
+    font-size: 1.12rem;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 0 32px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-photo-wrap {
+    position: relative;
+  }
+  .hero-photo {
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 28px 60px -24px rgba(35,48,31,0.35);
+    transform: rotate(1.4deg);
+  }
+  .hero-photo img { width: 100%; height: auto; display: block; }
+  .hero-tag {
+    position: absolute;
+    bottom: -18px;
+    left: -18px;
+    background: #24513a;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 12px 16px;
+    box-shadow: 0 10px 30px -10px rgba(35,48,31,0.25);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: rotate(-2deg);
+  }
+  .hero-tag .odds { font-family: 'Fraunces', serif; font-size: 1.5rem; color: white; line-height: 1; }
+  .hero-tag .odds-label { font-size: 0.72rem; color: white; line-height: 1.2; max-width: 12ch; }
+
+  /* ---------- trust strip ---------- */
+  .trust {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 26px 0;
+  }
+  .trust-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+  .trust-item svg { width: 20px; height: 20px; color: var(--clover); flex-shrink: 0; }
+
+  /* ---------- section generic ---------- */
+  section.block { padding: 78px 0; }
+  section.block.tight { padding: 56px 0; }
+  .section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  .section-head h2 { font-size: clamp(1.7rem, 2.6vw, 2.2rem); margin: 0; }
+  .section-head p { color: var(--ink-soft); max-width: 50ch; margin: 10px 0 0; }
+  .section-link {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--clover-deep);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
+
+  /* ---------- category tiles (home) ---------- */
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  .cat-tile {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 26px 20px;
+    background: #fff;
+    text-align: left;
+    cursor: pointer;
+    transition: transform .2s, border-color .2s, box-shadow .2s;
+  }
+  .cat-tile:hover {
+    transform: translateY(-4px);
+    border-color: var(--clover);
+    box-shadow: 0 16px 30px -18px rgba(35,48,31,0.3);
+  }
+  .cat-tile-photo {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    background: var(--clover-pale);
+  }
+  .img-missing {
+    color: transparent;
+    background-color: var(--clover-pale);
+    background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cpath d=%22M50 48C50 48 48 20 30 20 18 20 12 30 16 40 20 50 36 52 50 48Z%22 fill=%22%231E7A3D%22 opacity=%220.35%22/%3E%3Cpath d=%22M50 48C50 48 52 20 70 20 82 20 88 30 84 40 80 50 64 52 50 48Z%22 fill=%22%231E7A3D%22 opacity=%220.35%22/%3E%3Cpath d=%22M50 48C50 48 48 76 30 76 18 76 12 66 16 56 20 46 36 44 50 48Z%22 fill=%22%231E7A3D%22 opacity=%220.35%22/%3E%3Cpath d=%22M50 48C50 48 52 76 70 76 82 76 88 66 84 56 80 46 64 44 50 48Z%22 fill=%22%231E7A3D%22 opacity=%220.35%22/%3E%3C/svg%3E');
+    background-position: center;
+    background-size: 34%;
+    background-repeat: no-repeat;
+  }
+  .cat-tile h3 { font-size: 1.05rem; margin: 0 0 6px; font-family: 'Inter', sans-serif; font-weight: 600; }
+  .cat-tile p { font-size: 0.86rem; color: var(--ink-soft); margin: 0; }
+
+  /* ---------- story / quote (home) ---------- */
+  .story {
+    background: var(--clover-pale);
+    border-radius: 22px;
+    padding: 54px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 36px;
+    align-items: center;
+  }
+  .story-badge {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #fff;
+    box-shadow: 0 10px 24px -10px rgba(35,48,31,0.3);
+  }
+  .story-badge img { width: 100%; height: 100%; object-fit: cover; }
+  .story blockquote {
+    margin: 0 0 14px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.28rem;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .story cite { font-style: normal; font-weight: 600; font-size: 0.9rem; color: var(--clover-deep); }
+
+  /* ---------- footer ---------- */
+  footer {
+    position: relative;
+    overflow: hidden;
+    background: var(--clover-deep);
+    color: #EFF3EC;
+    padding: 56px 0 calc(28px + env(safe-area-inset-bottom, 0px));
+    margin-top: 40px;
+  }
+  footer::before {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    right: -10%;
+    width: 460px;
+    height: 460px;
+    background-image: url('pattern.png');
+    background-size: 200px;
+    background-repeat: repeat;
+    opacity: 0.35;
+    mix-blend-mode: multiply;
+    -webkit-mask-image: radial-gradient(circle at 65% 65%, black, transparent 68%);
+    mask-image: radial-gradient(circle at 65% 65%, black, transparent 68%);
+    pointer-events: none;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 40px;
+  }
+  footer h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  footer .footer-logo { border-radius: 10px; overflow: hidden; max-width: 350px; margin-bottom: 14px; }
+  footer p, footer li { color: #CFE0D2; font-size: 0.9rem; }
+  footer ul { list-style: none; padding: 0; margin: 0; }
+  footer li { margin-bottom: 10px; display: flex; gap: 10px; align-items: flex-start; }
+  footer li svg { width: 16px; height: 16px; margin-top: 3px; flex-shrink: 0; color: #9CC1A2; }
+  footer a { text-decoration: none; }
+  footer nav a { color: #CFE0D2; display: inline-block; margin-bottom: 10px; }
+  footer nav a:hover { color: #fff; }
+  .social-row { display: flex; gap: 10px; margin-top: 16px; }
+  .social-row a {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex; align-items: center; justify-content: center;
+    transition: background .2s;
+  }
+  .social-row a:hover { background: rgba(255,255,255,0.22); }
+  .social-row svg { width: 17px; height: 17px; color: #fff; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.14);
+    margin-top: 40px;
+    padding-top: 22px;
+    font-size: 0.82rem;
+    color: #9CC1A2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+.stand-slide {
+  position: relative;
+}
+
+.stand-year {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--cream);
+  color: #315c4a;
+  padding: 6px 11px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+  /* ---------- SHOP page ---------- */
+  .shop-banner {
+    position: relative;
+    overflow: hidden;
+    background: var(--clover-deep);
+    padding: 64px 0 56px;
+  }
+  .shop-banner-accent {
+    position: absolute;
+    top: -25%;
+    right: -8%;
+    width: 480px;
+    height: 480px;
+    background-image: url('pattern.png');
+    background-size: 220px;
+    background-repeat: repeat;
+    opacity: 0.30;
+    mix-blend-mode: multiply;
+    -webkit-mask-image: radial-gradient(circle at 65% 65%, black, transparent 68%);
+    mask-image: radial-gradient(circle at 65% 65%, black, transparent 68%);
+    pointer-events: none;
+  }
+  .shop-banner-inner { position: relative; }
+  .eyebrow-light {
+    background: rgba(255,255,255,0.16);
+    color: #fff;
+  }
+  .shop-banner h1 {
+    color: #fff;
+    font-size: clamp(2.3rem, 4.2vw, 3.4rem);
+    margin: 0 0 14px;
+  }
+  .shop-banner p {
+    color: #D9E6D3;
+    font-size: 1.08rem;
+    max-width: 56ch;
+    margin: 0;
+  }
+  .shop-tabs {
+    position: sticky;
+    top: 79px;
+    z-index: 20;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    padding: 18px 0;
+    margin-top: 30px;
+  }
+  .shop-tabs .wrap { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+  .shop-tabs .wrap::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    font-family: 'Inter', sans-serif;
+    background: none;
+    border: 2px solid var(--line);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink-soft);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .2s;
+  }
+  .tab-btn:hover { border-color: var(--clover); color: var(--ink); }
+  .tab-btn.active { background: var(--clover); border-color: var(--clover); color: #fff; }
+
+  @media (max-width: 640px) {
+    .shop-tabs .wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      overflow-x: visible;
+      gap: 8px;
+    }
+    .tab-btn {
+      width: 100%;
+      text-align: center;
+      white-space: normal;
+      padding: 10px 8px;
+      font-size: 0.82rem;
     }
   }
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-    :root {
-      --primary-color: #4c9e76;
-      --primary-dark: #2f5e47;
-      --accent-color: #EDD9E9;
-      --accent-dark: #D4A7CE;
-      --text-color: #333;
-      --light-bg: #f8f9fa;
-      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      --border-radius: 10px;
-    }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  .shop-panel { display: none; padding: 44px 0 30px; }
+  .shop-panel.active { display: block; }
+  .shop-panel .panel-intro { color: var(--ink-soft); max-width: 60ch; margin: 0 0 34px; }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: var(--light-bg);
-      color: var(--text-color);
-      line-height: 1.6;
-    }
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 28px;
+  }
+  .product {
+    background: #fff;
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s, border-color .2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .product:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 26px 44px -22px rgba(35,48,31,0.4);
+    border-color: var(--clover);
+  }
+  .card-carousel {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: var(--cream-2);
+  }
+  .card-carousel img { width: 100%; height: 100%; object-fit: cover; }
+  .card-carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.85);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .2s;
+    font-size: 0.85rem;
+  }
+  .product:hover .card-carousel button { opacity: 1; }
+  .card-carousel .card-prev { left: 8px; }
+  .card-carousel .card-next { right: 8px; }
+  .product-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .product-tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .tag-rare .dot { background: var(--badge-rare); }
+  .tag-rare { color: var(--badge-rare); }
+  .product-content { padding: 22px 22px 24px; flex-grow: 1; display: flex; flex-direction: column; }
+  .product h3 { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.12rem; margin: 0 0 6px; }
+  .product .price { font-family: 'Fraunces', serif; font-weight: 600; color: var(--clover-deep); font-size: 1.35rem; margin-bottom: 8px; }
+  .product .short-desc { font-size: 0.86rem; color: var(--ink-soft); margin: 0 0 14px; flex-grow: 1; }
+  .view-details {
+    align-self: flex-start;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--clover-deep);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
 
+  /* ---------- modal ---------- */
+  .modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(35,48,31,0.55);
+    opacity: 0;
+    transition: opacity .25s;
+  }
+  .modal.show { opacity: 1; }
+  .modal-content {
+    background: #fff;
+    margin: 4vh auto;
+    width: 92%;
+    max-width: 780px;
+    max-height: 92vh;
+    overflow-y: auto;
+    border-radius: 18px;
+    transform: translateY(-16px);
+    opacity: 0;
+    transition: transform .3s, opacity .3s;
+  }
+  .modal.show .modal-content { transform: translateY(0); opacity: 1; }
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--line);
+  }
+  .modal-header h2 { font-size: 1.2rem; margin: 0; font-family: 'Fraunces', serif; }
+  .close { font-size: 1.6rem; cursor: pointer; color: var(--ink-soft); line-height: 1; background:none; border:none; }
+  .close:hover { color: var(--ink); }
+  .carousel { position: relative; background: var(--cream-2); }
+  .carousel-images { aspect-ratio: 4/3; max-height: 420px; }
+  .carousel-images img { width: 100%; height: 100%; object-fit: contain; }
+  .carousel button {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.85); border: none;
+    width: 38px; height: 38px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; cursor: pointer;
+  }
+  .carousel .prev { left: 14px; }
+  .carousel .next { right: 14px; }
+  .product-info { padding: 26px 26px 30px; }
+  #modalPrice { font-family: 'Fraunces', serif; font-size: 1.7rem; color: var(--clover-deep); font-weight: 600; display: block; margin-bottom: 14px; }
+  .description { color: var(--ink-soft); margin-bottom: 20px; }
+  .product-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 22px;
+  }
+  .meta-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--ink-soft); }
+  .meta-item svg { width: 16px; height: 16px; color: var(--clover); flex-shrink: 0; }
 
+  /* ---------- OWNER page ---------- */
+  .owner-hero {
+    padding: 60px 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+  .placeholder-box {
+    aspect-ratio: 4/5;
+    border: 2px dashed var(--line);
+    border-radius: var(--radius);
+    background: var(--cream-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    gap: 10px;
+    color: var(--ink-soft);
+  }
+  .placeholder-box svg { width: 40px; height: 40px; color: var(--clover); opacity: 0.6; }
+  .placeholder-box strong { color: var(--ink); font-size: 0.95rem; }
+  .placeholder-box span { font-size: 0.82rem; max-width: 24ch; }
+  .owner-facts { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; }
+  .owner-facts li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.95rem; }
+  .owner-facts svg { width: 20px; height: 20px; color: var(--clover); flex-shrink: 0; margin-top: 2px; }
+  .video-placeholder {
+    margin-top: 60px;
+    border: 2px dashed var(--line);
+    border-radius: var(--radius);
+    background: var(--cream-2);
+    aspect-ratio: 16/7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--ink-soft);
+    text-align: center;
+    padding: 20px;
+  }
+  .video-placeholder svg { width: 46px; height: 46px; color: var(--clover); opacity: 0.6; }
 
-    nav {
-      background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('banner1.png');
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+  /* ---------- LEARN page ---------- */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .compare-card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+    background: #fff;
+  }
+  .compare-card.real { border-color: var(--clover); background: var(--clover-pale); }
+  .compare-card h3 { font-size: 1.1rem; margin: 0 0 4px; }
+  .compare-card .latin { font-style: italic; color: var(--ink-soft); font-size: 0.88rem; margin: 0 0 16px; }
+  .compare-card ul { padding-left: 18px; margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
+  .compare-card li { margin-bottom: 8px; }
 
-    .nav-content {
-      display: flex;
-      justify-content: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+  .odds-strip {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 50px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .big-odds { font-family: 'Fraunces', serif; font-size: clamp(3.2rem, 7vw, 5.2rem); color: var(--clover-deep); line-height: 1; font-weight: 500; }
+  .odds-strip p { color: var(--ink-soft); max-width: 58ch; margin: 0; }
 
-   nav ul {
-     display: flex;
-     list-style: none;
-     padding: 0;
-     margin: 0;
-     overflow-x: auto; /* Enable horizontal scroll */
-     -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
-     white-space: nowrap; /* Prevent line wrapping */
-     scrollbar-width: none; /* Hide scrollbar in Firefox */
-   }
+  .record-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .record-card {
+    border-radius: var(--radius);
+    padding: 30px;
+  }
+  .record-card.world { background: var(--ink); color: #EFF3EC; }
+  .record-card.mine { background: var(--clover-pale); }
+  .record-card .num { font-family: 'Fraunces', serif; font-size: 2.6rem; margin: 0 0 6px; line-height: 1; }
+  .record-card.world .num { color: #fff; }
+  .record-card.mine .num { color: var(--clover-deep); }
+  .record-card p { margin: 0; font-size: 0.9rem; }
+  .record-card.world p { color: #C9D6C6; }
+  .record-card.mine p { color: var(--ink-soft); }
 
-   nav ul::-webkit-scrollbar {
-     display: none; /* Hide scrollbar in WebKit browsers */
-   }
+  .faq { border-top: 1px solid var(--line); }
+  .faq details { border-bottom: 1px solid var(--line); padding: 20px 0; }
+  .faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary .plus { color: var(--clover); font-size: 1.3rem; transition: transform .2s; }
+  .faq details[open] summary .plus { transform: rotate(45deg); }
+  .faq details p { color: var(--ink-soft); margin: 14px 0 0; max-width: 68ch; }
 
-    nav li {
-      margin: 0 15px;
-    }
+  /* ---------- LEARN page: science sections ---------- */
+  .learn-banner-inner p { max-width: 60ch; }
+  .tiktok-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 14px;
+    padding: 9px 18px 9px 9px;
+    margin-top: 28px;
+    text-decoration: none;
+    transition: background .2s, transform .2s;
+  }
+  .tiktok-card:hover { background: rgba(255,255,255,0.22); transform: translateY(-1px); }
+  .tiktok-thumb {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .tiktok-thumb svg { width: 16px; height: 16px; color: var(--clover-deep); margin-left: 2px; }
+  .tiktok-card .tiktok-label strong { display: block; color: #fff; font-size: 0.92rem; font-weight: 700; }
+  .tiktok-card .tiktok-label span { display: block; color: #D9E6D3; font-size: 0.78rem; margin-top: 1px; }
 
-    nav a {
-      display: block;
-      color: var(--text-color);
-      text-decoration: none;
-      font-weight: 500;
-      padding: 15px 10px;
-      position: relative;
-      transition: color 0.3s;
-    }
+  .sci-kicker {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--clover-deep);
+    background: var(--clover-pale);
+    padding: 5px 13px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+  .sci-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .sci-grid h2 { margin: 0 0 6px; }
+  .latin-lg {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--clover-deep);
+    margin: 0 0 16px;
+  }
+  .sci-grid p { color: var(--ink-soft); margin: 0 0 14px; max-width: 56ch; }
+  .sci-grid p:last-child { margin-bottom: 0; }
+  .sci-figure {
+    margin: 0;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 26px 22px 20px;
+  }
+  .sci-figure svg { width: 100%; height: auto; display: block; margin: 0 auto; max-width: 280px; }
+  .sci-figure figcaption {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    margin-top: 14px;
+    text-align: center;
+    line-height: 1.5;
+  }
+  sup { font-size: 0.72em; }
+  sup a {
+    color: var(--clover-deep);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0 1px;
+  }
+  sup a:hover { text-decoration: underline; }
 
-    nav a:after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: var(--primary-color);
-      transition: width 0.3s;
-    }
+  .imposter-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .imposter-card {
+    background: #fff;
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius);
+    padding: 26px 26px 24px;
+  }
+  .imposter-card.real { border-color: var(--clover); background: var(--clover-pale); }
+  .imposter-card .sci-figure { border: none; padding: 6px 6px 18px; background: transparent; }
+  .imposter-card h3 { font-size: 1.1rem; margin: 14px 0 2px; }
+  .imposter-card .latin-lg { font-size: 1.05rem; margin-bottom: 14px; }
+  .imposter-card ul { padding-left: 18px; margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
+  .imposter-card li { margin-bottom: 8px; }
+  .imposter-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 4px 11px;
+    border-radius: 20px;
+  }
+  .imposter-tag.yes { background: var(--clover); color: #fff; }
+  .imposter-tag.no { background: var(--ink); color: #fff; }
 
-    nav a:hover {
-      color: var(--primary-dark);
-    }
+  .refs-section { border-top: 1px solid var(--line); background: var(--cream-2); }
+  .ref-list {
+    list-style: decimal;
+    padding-left: 22px;
+    color: var(--ink-soft);
+    font-size: 0.86rem;
+    display: grid;
+    gap: 12px;
+    max-width: 74ch;
+  }
+  .ref-list li { padding-left: 4px; scroll-margin-top: 100px; }
+  .ref-list li:target { background: var(--clover-pale); border-radius: 8px; padding: 8px 10px; margin-left: -10px; }
+  .ref-list a { color: var(--clover-deep); word-break: break-word; }
+  .ref-list .ref-note { color: var(--ink-soft); }
 
-    nav a:hover:after {
-      width: 100%;
-    }
+  /* ---------- OWNER video + stand carousel ---------- */
+  .owner-video {
+    margin: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--clover-deep);
+    aspect-ratio: 4/5;
+    box-shadow: 0 28px 60px -24px rgba(35,48,31,0.35);
+  }
+  .owner-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-   .banner {
-     background-size: cover;
-     background-position: center;
-     padding: 60px 20px;
-     text-align: center;
-     margin-bottom: 40px; 
-   }
+  .stand-carousel { position: relative; max-width: 920px; margin: 0 auto; outline: none; }
+  .stand-carousel:focus-visible { box-shadow: 0 0 0 3px var(--clover); border-radius: var(--radius); }
+  .stand-viewport {
+    overflow: hidden;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: #fff;
+    aspect-ratio: 3/2;
+  }
+  .stand-track { display: flex; height: 100%; transition: transform .45s ease; }
+  .stand-slide { flex: 0 0 100%; height: 100%; }
+  .stand-slide img { width: 100%; height: 100%; object-fit: cover; }
+  .stand-btn {
+    position: absolute;
+    top: calc(50% - 24px);
+    transform: translateY(-50%);
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.9);
+    color: var(--ink);
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .stand-btn:hover { background: #fff; }
+  .stand-btn:focus-visible { outline: 3px solid var(--clover); }
+  .stand-prev { left: 14px; }
+  .stand-next { right: 14px; }
+  .stand-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; margin-top: 16px;
+  }
+  .stand-dots { display: flex; gap: 8px; flex-wrap: wrap; }
+  .stand-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    border: none; padding: 0; cursor: pointer;
+    background: var(--line);
+  }
+  .stand-dot[aria-current="true"] { background: var(--clover); }
+  .stand-count { font-size: 0.86rem; color: var(--ink-soft); font-weight: 600; }
+  @media (prefers-reduced-motion: reduce) { .stand-track { transition: none; } }
 
-
-    .banner h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      color: var(--primary-dark);
-    }
-
-    .banner p {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: 0 auto 25px;
-    }
-
-    .banner-button {
-      display: inline-block;
-      padding: 12px 25px;
-      background-color: var(--primary-color);
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 600;
-      transition: all 0.3s;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .banner-button:hover {
-      background-color: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-
-    main {
-      width: 90%;
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 20px;
-    }
-
-    .category {
-      margin-bottom: 60px;
-    }
-
-    .category-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 30px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 10px;
-    }
-
-    .category-header h2 {
-      font-size: 2em;
-      margin: 0;
-      position: relative;
-      padding-left: 20px;
-      font-weight: 600;
-    }
-
-    .category-header h2:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 6px;
-      height: 70%;
-      background-color: var(--primary-color);
-      border-radius: 3px;
-    }
-
-    .category-header .view-all {
-      margin-left: auto;
-      color: var(--primary-dark);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .category-header .view-all:hover {
-      color: var(--primary-color);
-      text-decoration: underline;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .product {
-      background: #fff;
-      border-radius: var(--border-radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-      height: 100%;
+  /* ---------- responsive ---------- */
+  @media (max-width: 880px) {
+    nav.mainnav { display: none; }
+    .menu-toggle { display: flex; }
+    .cta-outline { display: none; }
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-photo-wrap { order: -1; max-width: 420px; margin: 0 auto; }
+    .cat-grid { grid-template-columns: repeat(2, 1fr); }
+    .story { grid-template-columns: 1fr; text-align: center; padding: 36px 24px; }
+    .story-badge { margin: 0 auto; }
+    .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+    .owner-hero { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .odds-strip { grid-template-columns: 1fr; text-align: center; gap: 16px; }
+    .record-row { grid-template-columns: 1fr; }
+    nav.mainnav.mobile-open {
       display: flex;
       flex-direction: column;
-    }
-
-    .product:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-    }
-
-    .card-carousel {
-      position: relative;
-      width: 100%;
-      height: 350px;
-      overflow: hidden;
-    }
-
-    .card-carousel img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s;
-    }
-
-    .product:hover .card-carousel img {
-      transform: scale(1.05);
-    }
-
-    .card-carousel button {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(255,255,255,0.7);
-      color: var(--text-color);
-      border: none;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      opacity: 0;
-      transition: opacity 0.3s, background-color 0.3s;
-      z-index: 2;
-    }
-
-    .product:hover .card-carousel button {
-      opacity: 1;
-    }
-
-    .card-carousel button:hover {
-      background-color: rgba(255,255,255,0.9);
-    }
-
-    .card-carousel .card-prev {
-      left: 10px;
-    }
-
-    .card-carousel .card-next {
-      right: 10px;
-    }
-
-
-    .product {
-      position: relative;
-    } 
-    .product-content {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    .product h3 {
-      font-size: 1.2em;
-      margin: 0 0 10px;
-      color: var(--text-color);
-      font-weight: 600;
-    }
-
-    .product .price {
-      font-weight: 600;
-      color: var(--primary-dark);
-      font-size: 1.1em;
-      margin-bottom: 15px;
-    }
-
-    .product .short-desc {
-      font-size: 0.9em;
-      color: #666;
-      margin-bottom: auto;
-      line-height: 1.4;
-    }
-  
-    .product-badge {
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-
-    .product:hover .product-badge {
-      opacity: 1;
-    }
-
-    .view-details {
-      display: inline-block;
-      padding: 8px 20px;
-      background-color: var(--accent-color);
-      color: var(--text-color);
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 600;
-      margin-top: 15px;
-      text-align: center;
-      transition: all 0.3s;
-    }
-
-    .view-details:hover {
-      background-color: var(--accent-dark);
-    }
-
-    /* Modal Styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 100;
+      top: 100%;
       left: 0;
-      top: 0;
+      right: 0;
+      background: var(--clover-deep);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      padding: 10px 28px 20px;
+      gap: 2px;
+    }
+    nav.mainnav.mobile-open .navlink {
       width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.5);
-      opacity: 0;
-      transition: opacity 0.3s;
+      text-align: left;
+      padding: 12px 14px;
+      font-size: 1rem;
     }
-
-    .modal.show {
-      opacity: 1;
-    }
-
-    .modal-content {
-      background-color: #fff;
-      margin: 5% auto;
-      width: 90%;
-      max-width: 800px;
-      border-radius: var(--border-radius);
-      overflow: hidden;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.2);
-      transform: translateY(-30px);
-      opacity: 0;
-      transition: transform 0.4s, opacity 0.4s;
-    }
-
-    .modal.show .modal-content {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    .modal-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 20px;
-      border-bottom: 1px solid #eee;
-    }
-
-    .close {
-      color: #aaa;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-
-    .close:hover {
-      color: #333;
-    }
-
-    .carousel {
-      position: relative;
-      max-height: 500px;
-      overflow: hidden;
-    }
-
-    .carousel-images {
-      height: 100%;
-    }
-
-    .carousel-images img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      max-height: 400px;
-    }
-
-    .carousel button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(255,255,255,0.7);
-      color: #333;
-      border: none;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      z-index: 2;
-    }
-
-    .carousel button:hover {
-      background-color: rgba(255,255,255,0.9);
-    }
-
-    .carousel .prev {
-      left: 15px;
-    }
-
-    .carousel .next {
-      right: 15px;
-    }
-
-    .product-info {
-      padding: 25px;
-    }
-
-    .product-info h2 {
-      margin: 0 0 15px;
-      font-size: 1.8em;
-      color: var(--text-color);
-    }
-
-    .product-info .description {
-      margin: 15px 0;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    #modalPrice {
-      font-size: 1.8em;
-      font-weight: 600;
-      color: var(--primary-dark);
-      margin: 20px 0;
+    .mobile-only-link {
       display: block;
-    }
-
-    .product-meta {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin: 20px 0;
-      padding: 15px 0;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
-    }
-
-    .meta-item {
-      display: flex;
-      align-items: center;
-    }
-
-    .meta-item i {
-      margin-right: 10px;
-      color: var(--primary-color);
-      font-size: 1.2em;
-    }
-
-    .buy-button {
-      display: inline-block;
-      padding: 12px 30px;
-      background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-dark) 100%);
-      color: var(--text-color);
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 600;
-      margin-top: 20px;
-      transition: all 0.3s;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .buy-button:hover {
-      background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent-color) 100%);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-
-    footer {
-      background-color: #333;
       color: #fff;
-      padding: 40px 0 20px;
-      margin-top: 60px;
+      border-top: 1px solid rgba(255,255,255,0.18);
+      margin-top: 6px;
+      padding-top: 14px !important;
     }
-
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      max-width: 1500px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .footer-section h3 {
-      font-size: 1.3em;
-      margin-bottom: 20px;
-      color: var(--primary-color);
-      position: relative;
-      padding-bottom: 10px;
-    }
-
-    .footer-section h3:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 50px;
-      height: 2px;
-      background-color: var(--primary-color);
-    }
-
-    .footer-section p {
-      margin-bottom: 15px;
-      line-height: 1.6;
-      color: #bbb;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .social-links a {
-      color: #fff;
-      background-color: rgba(255,255,255,0.1);
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s;
-    }
-
-    .social-links a:hover {
-      background-color: var(--primary-color);
-    }
-
-    .contact-info {
-      list-style: none;
-      padding: 0;
-    }
-
-    .contact-info li {
-      padding-left: 30px;
-      position: relative;
-      margin-bottom: 15px;
-      color: #bbb;
-    }
-
-    .contact-info li i {
-      position: absolute;
-      left: 0;
-      top: 5px;
-      color: var(--primary-color);
-    }
-
-    .quick-links {
-      list-style: none;
-      padding: 0;
-    }
-
-    .quick-links li {
-      margin-bottom: 10px;
-    }
-
-    .quick-links a {
-      color: #bbb;
-      text-decoration: none;
-      transition: color 0.3s;
-      display: inline-block;
-    }
-
-    .quick-links a:hover {
-      color: var(--primary-color);
-      padding-left: 5px;
-    }
-
-    .newsletter-form {
-      display: flex;
-      margin-top: 15px;
-    }
-
-    .newsletter-form input {
-      flex-grow: 1;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 4px 0 0 4px;
-      outline: none;
-    }
-
-    .newsletter-form button {
-      background-color: var(--primary-color);
-      color: white;
-      border: none;
-      padding: 0 15px;
-      border-radius: 0 4px 4px 0;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .newsletter-form button:hover {
-      background-color: var(--primary-dark);
-    }
-
-    .footer-bottom {
-      text-align: center;
-      padding-top: 20px;
-      margin-top: 40px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      color: #888;
-      font-size: 0.9em;
-    }
-
-    /* Product badges */
-    .product-badge {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background-color: var(--primary-color);
-      color: white;
-      padding: 5px 12px;
-      border-radius: 15px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      z-index: 2;
-    }
-
-    .badge-new {
-      background-color: #6FCF97;
-    }
-
-    .badge-popular {
-      background-color: #F2C94C;
-    }
-
-    .badge-rare {
-      background-color: #BB6BD9;
-    }
-
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      .category-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      
-      .category-header .view-all {
-        margin: 10px 0 0;
-      }
-      
-      .banner h1 {
-        font-size: 2rem;
-      }
-      
-      .product-meta {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header img {
-        max-height: 80px;
-      }
-      
-      .tagline {
-        font-size: 1.2rem;
-      }
-      
-      .banner {
-        padding: 40px 15px;
-      }
-      
-      .banner h1 {
-        font-size: 1.8rem;
-      }
-      
-      .product-info h2 {
-        font-size: 1.5em;
-      }
-      
-      #modalPrice {
-        font-size: 1.5em;
-      }
-    }
-  </style>
+  }
+  @media (max-width: 560px) {
+    .cat-grid { grid-template-columns: 1fr; }
+    .hero { padding: 50px 0 60px; }
+  }
+</style>
 </head>
-<body>
-  
+<body data-theme="light">
+
 <header>
-  <img src="topbanner.png" alt="The 4 Leaf Clover Store Banner" style="width: 100%; height: auto; display: block;">
+  <div class="brand-zone">
+    <button class="brand" onclick="goTo('home')" aria-label="The 4 Leaf Clover Store — Home">
+      <img class="brand-logo-img" src="websitetitle.png" alt="The 4 Leaf Clover Store — Genuine Handpicked 4 Leaf Clovers">
+    </button>
+  </div>
+  <div class="header-inner">
+    <nav class="mainnav" id="mainnav">
+      <button class="navlink" data-route="home" onclick="goTo('home')">Home</button>
+      <button class="navlink" data-route="shop" onclick="goTo('shop')">Shop</button>
+      <button class="navlink" data-route="owner" onclick="goTo('owner')">Meet the Owner</button>
+      <button class="navlink" data-route="learn" onclick="goTo('learn')">Learn About Clovers</button>
+      <a class="navlink mobile-only-link" href="https://the4leafcloverstore.etsy.com" target="_blank" rel="noopener">Etsy Shop ↗</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <a class="cta-outline nav-cta" href="https://the4leafcloverstore.etsy.com" target="_blank" rel="noopener">Etsy Shop</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
 </header>
 
-  <nav>
-    <div class="nav-content">
-      <ul>
-        <li><a href="#laminated-clovers">Laminated Clovers</a></li>
-        <li><a href="#jewelry">Jewellery & Ornaments</a></li>
-        <li><a href="#Discounted Imperfect Clovers">Discounted Imperfect Clovers</a></li>
-        <li><a href="#rarities">Rarities</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#blog">Blog</a></li>
-      </ul>
+<!-- ============ HOME ============ -->
+<main id="page-home" class="page active">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="eyebrow-clover">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+          Hand-picked in Ontario, Canada
+        </div>
+        <h1>Real four-leaf clovers, <em>genuinely</em> found and hand-picked.</h1>
+        <p class="lede">Genuine, hand-picked 4 leaf clovers; spotted, picked and preserved by me (Taylor)! </p>
+        <div class="hero-actions">
+          <button class="cta-pill" onclick="goTo('shop')">Shop the collection</button>
+          <button class="cta-outline" onclick="goTo('owner')">Meet Taylor</button>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo">
+          <img src="newclover.png" alt="A genuine four-leaf clover, laminated and held up against the sky">
+        </div>
+        <div class="hero-tag">
+          <span class="odds">1 : 5,000</span>
+          <span class="odds-label">Odds of finding one four-leaf clover</span>
+        </div>
+      </div>
     </div>
-  </nav>
-
-  <section class="banner">
-    <h1>Genuine Hand-Picked Four-Leaf Clovers</h1>
-    <p>Each clover is naturally found (by me!) and carefully preserved to bring you authentic good luck. Perfect for gifts, keepsakes, or your own personal charm.</p>
-    <a href="https://the4leafcloverstore.etsy.com" target="_blank" class="banner-button">Visit My Etsy Shop!</a>
-
   </section>
 
-  <main>
-    <!-- Laminated Clovers Category -->
-    <section class="category" id="laminated-clovers">
-      <div class="category-header">
-        <h2>Laminated Clovers</h2>
-        <a href="https://the4leafcloverstore.etsy.com" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+  <section class="trust">
+    <div class="wrap trust-inner">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        100% genuine, wild-found clovers
       </div>
-      <div class="products">
-        <div class="product" 
-          data-id="laminated-clover"
-          href= "laminated-clover"
-          data-title="Laminated 4 Leaf Clover" 
-          data-description="Genuine handpicked laminated four-leaf clovers from Ontario! Every clover is unique, perfect for anniversaries, birthdays, St. Patrick's Day. Keep it in your wallet for ongoing luck or as a unique bookmark. Our clovers are carefully selected and preserved through a special lamination process to maintain their natural beauty and bring you good fortune for years to come."
-          data-price="$8.50 CAD"
-          data-images="newclover.png, pr1.png, pr2.png, pr3.png, pr4.png, pr5.png, pr6.png, pr7.png"
-          data-etsy="https://www.etsy.com/ca/listing/812124389/four-leaf-clovers-genuine-and-hand?ref=shop_home_feat_1">
-          <div class="product-badge badge-popular">Popular</div>
-          <div class="card-carousel">
-            <button class="card-prev" title="Previous Image"><i class="fas fa-chevron-left"></i></button>
-            <img class="card-image" src="" alt="Product Image" onerror="this.onerror=null;this.src='https://via.placeholder.com/300?text=Image+Not+Found';">
-            <button class="card-next" title="Next Image"><i class="fas fa-chevron-right"></i></button>
-          </div>
-          <div class="product-content">
-            <h3>4 Leaf Clover - Laminated</h3>
-            <div class="price">$8.50</div>
-            <p class="short-desc">Genuine handpicked four-leaf clover, carefully preserved in a durable lamination.</p>
-            <button class="view-details">View Details</button>
-          </div>
-        </div>
-        
-        <!-- Pair of CLovers Product -->
-        <div class="product" 
-          data-title="Pair of 4 Leaf Clovers - Laminated" 
-          data-id="pair-of-laminated-clovers"
-          data-description="A beautiful pair of laminated genuine four-leaf clovers. Perfect for sharing the luck with loved ones."
-          data-price="$12.00"
-          data-images="newpair.png, pc1.png, pc2.png, pr5.png, pr7.png"
-          data-etsy="https://www.etsy.com/ca/listing/926641305/pair-of-four-leaf-clovers-genuine-and">
-          <div class="product-badge badge-popular">Popular</div>
-          <div class="card-carousel">
-            <button class="card-prev" title="Previous Image"><i class="fas fa-chevron-left"></i></button>
-            <img class="card-image" src="" alt="Product Image" onerror="this.onerror=null;this.src='https://via.placeholder.com/300?text=Image+Not+Found';">
-            <button class="card-next" title="Next Image"><i class="fas fa-chevron-right"></i></button>
-          </div>
-          <div class="product-content">
-            <h3>Pair of 4 Leaf Clovers - Laminated</h3>
-            <div class="price">$12.00</div>
-            <p class="short-desc">A beautiful pair of laminated genuine four-leaf clovers. Perfect for sharing the luck with loved ones.</p>
-            <button class="view-details">View Details</button>
-          </div>
-        </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 6 6 10 6 13a6 6 0 0012 0c0-3-2-7-6-11z"/></svg>
+        Hand-picked across Ontario
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="13" height="10" rx="1"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7" cy="19" r="1.6"/><circle cx="18" cy="19" r="1.6"/></svg>
+        Ships worldwide from Canada
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/></svg>
+        Durably laminated to last
+      </div>
+    </div>
+  </section>
 
-        <!-- Bookmark Clover -->
-        <div class="product" 
-          data-id="bookmark-clover"
-          data-title="Bookmark Clover - Laminated" 
-          data-description="A laminated four-leaf clover designed to be used as a bookmark. Brings good fortune to your reading adventures!"
-          data-price="$15.00"
-          data-images="newbookmark2.png, newbookmark1.png, newbookmark.png, bm3.JPEG, bm2.JPEG, bm1.JPEG, bm4.JPEG, bm5.JPEG, bm6.JPEG"
-          data-etsy="https://www.etsy.com/ca/listing/812124389/four-leaf-clovers-genuine-and-hand?ref=shop_home_feat_1">
-          <div class="card-carousel">
-            <button class="card-prev" title="Previous Image"><i class="fas fa-chevron-left"></i></button>
-            <img class="card-image" src="" alt="Product Image" onerror="this.onerror=null;this.src='https://via.placeholder.com/300?text=Image+Not+Found';">
-            <button class="card-next" title="Next Image"><i class="fas fa-chevron-right"></i></button>
-          </div>
-          <div class="product-content">
-            <h3>Bookmark Clover - Laminated</h3>
-            <div class="price">$15.00</div>
-            <p class="short-desc">A laminated four-leaf clover designed to be used as a bookmark. Brings good fortune to your reading adventures!</p>
-            <button class="view-details">View Details</button>
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Shop by category</h2>
+          <p>Check out the various ways I preserve and present my clovers, from laminated wallet keepsakes to jewellery and trinkets.</p>
+        </div>
+        <a class="section-link" href="#" onclick="goTo('shop'); return false;">View full shop →</a>
+      </div>
+      <div class="cat-grid">
+        <button class="cat-tile" onclick="goTo('shop','laminated')">
+          <img class="cat-tile-photo" src="newclover.png" alt="Laminated four-leaf clover" onerror="this.onerror=null;this.removeAttribute('src');this.classList.add('img-missing')">
+          <h3>Laminated Clovers</h3>
+          <p>Wallet-sized keepsakes and bookmarks</p>
+        </button>
+        <button class="cat-tile" onclick="goTo('shop','jewelry')">
+          <img class="cat-tile-photo" src="newjar.png" alt="Four-leaf clover jewellery and jar" onerror="this.onerror=null;this.removeAttribute('src');this.classList.add('img-missing')">
+          <h3>Jewellery &amp; Trinkets</h3>
+          <p>Pendants, lockets and glass jar keepsakes</p>
+        </button>
+        <button class="cat-tile" onclick="goTo('shop','rarities')">
+          <img class="cat-tile-photo" src="new5leaf.png" alt="Rare five-leaf clover" onerror="this.onerror=null;this.removeAttribute('src');this.classList.add('img-missing')">
+          <h3>Rarities</h3>
+          <p>Genuine 5, 6 and 7-leaf clovers</p>
+        </button>
+        <button class="cat-tile" onclick="goTo('shop','quirky')">
+          <img class="cat-tile-photo" src="imp1.png" alt="Imperfect four-leaf clover" onerror="this.onerror=null;this.removeAttribute('src');this.classList.add('img-missing')">
+          <h3>Imperfect Clovers</h3>
+          <p>Naturally imperfect clovers, heavily discounted</p>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tight">
+    <div class="wrap">
+      <div class="story">
+        <div class="story-badge">
+          <img src="founder_image.jpg">
+        </div>
+        <div>
+          <blockquote>"I've had this strange talent for finding 4-leaf clovers since I was 6 years old. It's my favourite summer pastime. I spend hours and hours on long walks just wandering through long grass. My friends say they spring up at my feet."</blockquote>
+          <cite>— Taylor, owner of The4LeafCloverStore</cite>
+          <div style="margin-top:18px;">
+            <a class="section-link" href="#" onclick="goTo('owner'); return false;">Read Taylor's story →</a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
+</main>
 
-        
-    <!-- Discounted Imperfect Clovers Category -->
-    <section class="category" id="Discounted Imperfect Clovers">
-      <div class="category-header">
-        <h2>Discounted Imperfect Clovers</h2>
-        <a href="https://the4leafcloverstore.etsy.com" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+<!-- ============ SHOP ============ -->
+<main id="page-shop" class="page">
+  <div class="shop-banner">
+    <div class="shop-banner-accent"></div>
+    <div class="wrap shop-banner-inner">
+      <div class="eyebrow-clover eyebrow-light">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+        The full collection
       </div>
-      <div class="products">
-        <div class="product" 
-          data-id="imperfect-4-leaf-clover"
-          data-title="Imperfect 4 Leaf Clover - Laminated" 
-          data-description="These are discounted *imperfect* clovers or, as I like to call them, quirky clovers! Perhaps they've been nibbled on a bit by a passing beetle, or met the wrong end of a lawn mower, a leaf or two maybe grew in a little strangly. Regardless, these clovers have some.. unique charm and come heavily discounted."
-          data-price="$5.00"
-          data-images="imp1.png, imp3.png, imp4.png, imp5.png"
-          data-etsy="https://www.etsy.com/ca/listing/1895741595/ugly-four-leaf-clover-genuine-hand">
-          <div class="card-carousel">
-            <button class="card-prev" title="Previous Image"><i class="fas fa-chevron-left"></i></button>
-            <img class="card-image" src="" alt="Product Image" onerror="this.onerror=null;this.src='https://via.placeholder.com/300?text=Image+Not+Found';">
-            <button class="card-next" title="Next Image"><i class="fas fa-chevron-right"></i></button>
-          </div>
-          <div class="product-content">
-            <h3>Imperfect 4 Leaf Clover - Laminated</h3>
-            <div class="price">$5.00</div>
-            <p class="short-desc">Naturally imperfect clovers, with bite marks and misshapen leaves. Durably laminated in 5mm thick pouches. </p>
-            <button class="view-details">View Details</button>
-          </div>
-        </div>
-
-        <div class="product" 
-          data-id="imperfect-5leaf-clover"
-          data-title="Imperfect 5 Leaf Clover - Laminated" 
-          data-description="These are discounted *imperfect* clovers or, as I like to call them, quirky clovers! Perhaps they've been nibbled on a bit by a passing beetle, or met the wrong end of a lawn mower, a leaf or two maybe grew in a little strangly. Regardless, these clovers have some.. unique charm and come heavily discounted."
-          data-price="$7.00"
-          data-images="imp51.png, imp53.png, imp54.png, imp55.png"
-          data-etsy="https://www.etsy.com/ca/listing/1895742107/5-imperfect-five-leaf-clovers-genuine">
-          <div class="card-carousel">
-            <button class="card-prev" title="Previous Image"><i class="fas fa-chevron-left"></i></button>
-            <img class="card-image" src="" alt="Product Image" onerror="this.onerror=null;this.src='https://via.placeholder.com/300?text=Image+Not+Found';">
-            <button class="card-next" title="Next Image"><i class="fas fa-chevron-right"></i></button>
-          </div>
-          <div class="product-content">
-            <h3>Imperfect 5 Leaf Clover - Laminated</h3>
-            <div class="price">$7.00</div>
-            <p class="short-desc">Naturally imperfect 5 leaf clovers, with bite marks and misshapen leaves. Durably laminated 5mm thick pouches. </p>
-            <button class="view-details">View Details</button>
-          </div>
-
-        </div>
-
-    </section>
-
-    <!-- Jewellery Category -->
-    <section class="category" id="jewelry">
-      <div class="category-header">
-        <h2>Jewellery & Ornaments</h2>
-        <a href="https://www.etsy.com/ca/shop/The4LeafCloverStore" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-
-      <div class="products">
-        <div class="product" 
-          data-id="jar-clover"
-          data-title="4 Leaf Clover Jar"
-          data-description="Beautiful real 4 leaf clover pressed and preserved in a small glass jar."
-          data-price="$15.00"
-          data-images="newjar.png, jar1.png, jar2.png, jar3.png, jar4.png, jar5.png"
-          data-etsy="https://www.etsy.com/ca/listing/813408667/four-leaf-clover-glass-jar-real">
-          <div class="product-badge badge-popular">Popular</div>
-          <div class="card-carousel">
-            <button class="card-prev" title="Previous Image"><i class="fas fa-chevron-left"></i></button>
-            <img class="card-image" src="" alt="Product Image" onerror="this.onerror=null;this.src='https://via.placeholder.com/300?text=Image+Not+Found';">
-            <button class="card-next" title="Next Image"><i class="fas fa-chevron-right"></i></button>
-          </div>
-          <div class="product-content">
-            <h3>4 Leaf Clover Jar</h3>
-            <div class="price">$15.00</div>
-            <p class="short-desc">Beautiful 4 leaf clover preserved in a glass jar.</p>
-            <button class="view-details">View Details</button>
-          </div>
-        </div>
-    
-        <div class="product" 
-          data-id="resin-pendant"
-          data-title="Resin Clover Pendant" 
-          data-description="Beautiful handcrafted resin pendant featuring a genuine four-leaf clover. Each piece is unique and makes a perfect lucky charm to wear close to your heart."
-          data-price="$25.00"
-          data-images="cpen1.png, cpen2.png, cpen3.png, cpen4.png, cpen5.png"
-          data-etsy="https://www.etsy.com/ca/listing/1503895427/real-four-leaf-clover-resin-pendant">
-          <div class="product-badge badge-popular">Popular</div>
-          <div class="card-carousel">
-            <button class="card-prev" title="Previous Image"><i class="fas fa-chevron-left"></i></button>
-            <img class="card-image" src="" alt="Product Image" onerror="this.onerror=null;this.src='https://via.placeholder.com/300?text=Image+Not+Found';">
-            <button class="card-next" title="Next Image"><i class="fas fa-chevron-right"></i></button>
-          </div>
-          <div class="product-content">
-            <h3>Resin Clover Pendant</h3>
-            <div class="price">$25.00</div>
-            <p class="short-desc">Handcrafted pendant with a real four-leaf clover preserved in crystal-clear resin.</p>
-            <button class="view-details">View Details</button>
-          </div>
-        </div>
-
-        <div class="product" 
-          data-id="clover-locket"
-          data-title="Clover Locket" 
-          data-description="A beautiful locket featuring a genuine four-leaf clover charm encased within."
-          data-price="$30.00"
-          data-images="cl.png.jpg, cl_1.png.jpg, cl_2.png.jpg, cl1.png, cl2.png, cl3.png, cl4.png"
-          data-etsy="https://www.etsy.com/ca/listing/1396060194/real-four-leaf-clover-pendant-handpicked">
-          <div class="card-carousel">
-            <button class="card-prev" title="Previous Image"><i class="fas fa-chevron-left"></i></button>
-            <img class="card-image" src="" alt="Product Image" onerror="this.onerror=null;this.src='https://via.placeholder.com/300?text=Image+Not+Found';">
-            <button class="card-next" title="Next Image"><i class="fas fa-chevron-right"></i></button>
-          </div>
-          <div class="product-content">
-            <h3>Clover Locket</h3>
-            <div class="price">$30.00</div>
-            <p class="short-desc">A beautiful locket featuring a genuine four-leaf clover charm encased within.</p>
-            <button class="view-details">View Details</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Rarities Category -->
-    <section class="category" id="rarities">
-      <div class="category-header">
-        <h2>Rarities</h2>
-        <a href="https://the4leafcloverstore.etsy.com" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-
-      <div class="products">
-        <div class="product" 
-          data-id="5-leaf-clover" 
-          data-title="Five-Leaf Clover - Rare Find" 
-          data-description="An extremely rare five-leaf clover, carefully preserved in our special lamination. These are incredibly uncommon finds and are said to bring even more luck than their four-leaf counterparts."
-          data-price="$14.00"
-          data-images="new5leaf.png, 5l1.png, 5l2.png, 5l3.png, 5l4.png"
-          data-etsy="https://www.etsy.com/ca/listing/799961972/five-leaf-clover-genuine-hand-picked">
-          <div class="product-badge badge-rare">Rare</div>
-          <div class="card-carousel">
-            <button class="card-prev" title="Previous Image"><i class="fas fa-chevron-left"></i></button>
-            <img class="card-image" src="" alt="Product Image" onerror="this.onerror=null;this.src='https://via.placeholder.com/300?text=Image+Not+Found';">
-            <button class="card-next" title="Next Image"><i class="fas fa-chevron-right"></i></button>
-          </div>
-          <div class="product-content">
-            <h3>Five-Leaf Clover - Rare Find</h3>
-            <div class="price">$14.00</div>
-            <p class="short-desc">Extremely rare five-leaf clover, carefully preserved for exceptional luck.</p>
-            <button class="view-details">View Details</button>
-          </div>
-        </div>
-
-        <div class="product" 
-          data-id="6-leaf-clover" 
-          data-title="Six-Leaf Clover - Ultra Rare" 
-          data-description="An incredibly rare six-leaf clover find. These are among the rarest clover mutations and are said to bring extraordinary luck to their owners."
-          data-price="$75.00"
-          data-images="sl1.png, sl2.png, sl3.png, sl4.png, sl5.png"
-          data-etsy="https://www.etsy.com/ca/listing/1498786323/real-six-leaf-clover-rare-only-1-genuine">
-          <div class="product-badge badge-rare">Ultra Rare</div>
-          <div class="card-carousel">
-            <button class="card-prev" title="Previous Image"><i class="fas fa-chevron-left"></i></button>
-            <img class="card-image" src="" alt="Product Image" onerror="this.onerror=null;this.src='https://via.placeholder.com/300?text=Image+Not+Found';">
-            <button class="card-next" title="Next Image"><i class="fas fa-chevron-right"></i></button>
-          </div>
-          <div class="product-content">
-            <h3>Six-Leaf Clover - Ultra Rare</h3>
-            <div class="price">$75.00</div>
-            <p class="short-desc">Extraordinarily rare six-leaf clover, a true collector's treasure.</p>
-            <button class="view-details">View Details</button>
-          </div>
-        </div>
-
-      <div class="products">
-        <div class="product" 
-          data-id="7-leaf-clover" 
-          data-title="Seven-Leaf Clover - Rare Find" 
-          data-description="An extremely rare seven-leaf clover, carefully preserved in our special lamination. These are incredibly rare finds are a true collector's treasure."
-          data-price="$100.00"
-          data-images="7l3.jpg, 7l1.jpg, 7l2.jpg, 7l.jpg, 7l4.jpg, 7l5.jpg"
-          data-etsy="https://www.etsy.com/ca/listing/1753750257/real-seven-leaf-clover-genuine-and-hand?ref=shop_home_active_1&logging_key=fcbc004be6cd947e4450774e94feb3dc613d5dfe%3A1753750257">
-          <div class="product-badge badge-rare">Ultra Rare</div>
-          <div class="card-carousel">
-            <button class="card-prev" title="Previous Image"><i class="fas fa-chevron-left"></i></button>
-            <img class="card-image" src="" alt="Product Image" onerror="this.onerror=null;this.src='https://via.placeholder.com/300?text=Image+Not+Found';">
-            <button class="card-next" title="Next Image"><i class="fas fa-chevron-right"></i></button>
-          </div>
-          <div class="product-content">
-            <h3>Seven-Leaf Clover - Rare Find</h3>
-            <div class="price">$100.00</div>
-            <p class="short-desc">Extremely rare seven-leaf clover, carefully preserved for exceptional luck.</p>
-            <button class="view-details">View Details</button>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section class="category" id="about">
-      <div class="category-header">
-        <h2>About Us</h2>
-      </div>
-      <div class="about-content">
-        <p>Welcome to The 4 Leaf Clover Store! My name is Taylor and these are my clovers! I've had this strange talent to find them since I was super little and it's my favourite summer pastime. I'll spend hours on long walks staring at the grass looking for them. These magical little plants bring me so much joy and I hope they can bring you some joy too! 🍀</p>
-        <p>All of the clovers are found naturally (by me!) in Ontario, Canada, with respect for nature. Every clover is unique and natural.</p>
-      </div>
-    </section>
-  </main>
-
-  <!-- Product Detail Modal -->
-  <div id="productModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 id="modalTitle">Product Title</h2>
-        <span class="close">&times;</span>
-      </div>
-      <div class="carousel">
-        <button class="prev" title="Previous Image"><i class="fas fa-chevron-left"></i></button>
-        <div class="carousel-images">
-          <img id="modalImage" src="" alt="Product Image">
-        </div>
-        <button class="next" title="Next Image"><i class="fas fa-chevron-right"></i></button>
-      </div>
-      <div class="product-info">
-        <span id="modalPrice">$0.00</span>
-        <div id="modalDescription" class="description">Product description goes here...</div>
-        <div class="product-meta">
-          <div class="meta-item">
-            <i class="fas fa-check-circle"></i>
-            <span>100% Genuine Four-Leaf Clover</span>
-          </div>
-          <div class="meta-item">
-            <i class="fas fa-truck"></i>
-            <span>Free Shipping on Orders $35+</span>
-          </div>
-          <div class="meta-item">
-            <i class="fas fa-shield-alt"></i>
-            <span>Satisfaction Guaranteed</span>
-          </div>
-        </div>
-        <a id="buyButton" href="#" class="buy-button" target="_blank">Buy on Etsy</a>
-      </div>
+      <h1>Shop the clovers</h1>
+      <p>Every piece below is a genuine 4-leaf clover, found and preserved by hand (my hand!).</p>
     </div>
   </div>
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>The 4 Leaf Clover Store</h3>
-        <p>Bringing authentic good luck to people worldwide with our genuine hand-picked four-leaf clovers.</p>
-        <div class="social-links">
-         <a href="https://www.instagram.com/the4leafcloverstore/?hl=en" target="_blank" rel="noopener">
-          <i class="fab fa-instagram"></i>
-         </a>
-         <a href="https://www.tiktok.com/@the4leafcloverstore?lang=en" target="_blank" rel="noopener">
-          <i class="fab fa-tiktok"></i>
-         </a>
-         <a href="https://the4leafcloverstore.etsy.com" target="_blank" rel="noopener">
-          <i class="fab fa-etsy"></i>
-         </a>
+  <div class="shop-tabs">
+    <div class="wrap">
+      <button class="tab-btn active" data-tab="laminated" onclick="showTab('laminated')">Laminated Clovers</button>
+      <button class="tab-btn" data-tab="jewelry" onclick="showTab('jewelry')">Jewellery &amp; Trinkets</button>
+      <button class="tab-btn" data-tab="rarities" onclick="showTab('rarities')">Rarities</button>
+      <button class="tab-btn" data-tab="quirky" onclick="showTab('quirky')">Imperfect Clovers</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- Laminated -->
+    <div class="shop-panel active" id="panel-laminated">
+      <p class="panel-intro">A simple, durable, and pocket-sized token of luck. Great as gifts or little reminders of good luck and magic. </p>
+      <div class="products">
+        <div class="product"
+          data-title="4 Leaf Clover - Laminated"
+          data-description="Genuine handpicked laminated four-leaf clovers from Ontario! Every clover is unique, perfect for anniversaries, birthdays, St. Patrick's Day. Keep it in your wallet for ongoing luck or as a unique bookmark. Our clovers are carefully selected and preserved through a special lamination process to maintain their natural beauty and bring you good fortune for years to come."
+          data-price-cad="8.50"
+          data-images="newclover.png, pr1.png, pr2.png, pr3.png, pr4.png, pr5.png, pr6.png, pr7.png"
+          data-etsy="https://www.etsy.com/ca/listing/812124389/four-leaf-clovers-genuine-and-hand?ref=shop_home_feat_1"
+          data-tag="Popular">
+          <div class="card-carousel">
+            <button class="card-prev" title="Previous Image">‹</button>
+            <img class="card-image" src="" alt="Laminated four-leaf clover">
+            <button class="card-next" title="Next Image">›</button>
+          </div>
+          <div class="product-content">
+            <h3>4 Leaf Clover — Laminated</h3>
+            <div class="price" data-cad="8.50">$8.50 CAD</div>
+            <p class="short-desc">Genuine handpicked four-leaf clover, carefully preserved in a durable lamination.</p>
+            <button class="view-details">View details →</button>
+          </div>
         </div>
 
+        <div class="product"
+          data-title="Pair of 4 Leaf Clovers - Laminated"
+          data-description="A beautiful pair of laminated genuine four-leaf clovers. Perfect for sharing the luck with loved ones."
+          data-price-cad="12.00"
+          data-images="newpair.png, pc1.png, pc2.png, pr5.png, pr7.png"
+          data-etsy="https://www.etsy.com/ca/listing/926641305/pair-of-four-leaf-clovers-genuine-and"
+          data-tag="Popular">
+          <div class="card-carousel">
+            <button class="card-prev" title="Previous Image">‹</button>
+            <img class="card-image" src="" alt="Pair of laminated four-leaf clovers">
+            <button class="card-next" title="Next Image">›</button>
+          </div>
+          <div class="product-content">
+            <h3>Pair of 4 Leaf Clovers — Laminated</h3>
+            <div class="price" data-cad="12.00">$12.00 CAD</div>
+            <p class="short-desc">A beautiful pair of laminated genuine four-leaf clovers, perfect for sharing the luck.</p>
+            <button class="view-details">View details →</button>
+          </div>
+        </div>
+
+        <div class="product"
+          data-title="Bookmark Clover - Laminated"
+          data-description="A laminated four-leaf clover designed to be used as a bookmark. Brings good fortune to your reading adventures!"
+          data-price-cad="15.00"
+          data-images="newbookmark2.png, newbookmark1.png, newbookmark.png, bm3.JPEG, bm2.JPEG, bm1.JPEG, bm4.JPEG, bm5.JPEG, bm6.JPEG"
+          data-etsy="https://www.etsy.com/ca/listing/812124389/four-leaf-clovers-genuine-and-hand?ref=shop_home_feat_1"
+          data-tag="">
+          <div class="card-carousel">
+            <button class="card-prev" title="Previous Image">‹</button>
+            <img class="card-image" src="" alt="Laminated clover bookmark">
+            <button class="card-next" title="Next Image">›</button>
+          </div>
+          <div class="product-content">
+            <h3>Bookmark Clover — Laminated</h3>
+            <div class="price" data-cad="15.00">$15.00 CAD</div>
+            <p class="short-desc">A laminated four-leaf clover designed as a bookmark, for good fortune while you read.</p>
+            <button class="view-details">View details →</button>
+          </div>
+        </div>
       </div>
-      <div class="footer-section">
-        <h3>Contact Us</h3>
-        <ul class="contact-info">
-          <li><i class="fas fa-envelope"></i>The4LeafCloverStore@gmail.com</li>
-          <li><i class="fas fa-map-marker-alt"></i> Ontario, Canada</li>
-          <li><i class="fas fa-clock"></i> Response Time: 1-2 Business Days</li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul class="quick-links">
-          <li><a href="#laminated-clovers">Laminated Clovers</a></li>
-          <li><a href="#jewelry">Jewelry</a></li>
-          <li><a href="#rarities">Rarities</a></li>
-          <li><a href="#about">About Us</a></li>
-        </ul>
-      </div>
-     <!-- <div class="footer-section">
-        <h3>Newsletter</h3>
-       <p>Subscribe to receive updates on new products and special promotions.</p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Your email address">
-         <button type="submit"><i class="fas fa-paper-plane"></i></button>
-        </form>
-      </div>-->
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 The4LeafCloverStore. All rights reserved.</p>
+
+    <!-- Quirky / Imperfect -->
+    <div class="shop-panel" id="panel-quirky">
+      <p class="panel-intro">Nibbled by a beetle, met the wrong end of a lawn mower, or just grew a little strangely — these clovers have character, and come heavily discounted.</p>
+      <div class="products">
+        <div class="product"
+          data-title="Imperfect 4 Leaf Clover - Laminated"
+          data-description="These are discounted imperfect clovers, or as I like to call them, quirky clovers! Perhaps they've been nibbled on a bit by a passing beetle, or met the wrong end of a lawn mower, or a leaf or two grew in a little strangely. Regardless, these clovers have some unique charm and come heavily discounted."
+          data-price-cad="5.00"
+          data-images="imp1.png, imp3.png, imp4.png, imp5.png"
+          data-etsy="https://www.etsy.com/ca/listing/1895741595/ugly-four-leaf-clover-genuine-hand"
+          data-tag="">
+          <div class="card-carousel">
+            <button class="card-prev" title="Previous Image">‹</button>
+            <img class="card-image" src="" alt="Imperfect four-leaf clover">
+            <button class="card-next" title="Next Image">›</button>
+          </div>
+          <div class="product-content">
+            <h3>Imperfect 4 Leaf Clover</h3>
+            <div class="price" data-cad="5.00">$5.00 CAD</div>
+            <p class="short-desc">Naturally imperfect clover with bite marks and misshapen leaves, durably laminated.</p>
+            <button class="view-details">View details →</button>
+          </div>
+        </div>
+
+        <div class="product"
+          data-title="Imperfect 5 Leaf Clover - Laminated"
+          data-description="These are discounted imperfect clovers, or as I like to call them, quirky clovers! Perhaps they've been nibbled on a bit by a passing beetle, or met the wrong end of a lawn mower, or a leaf or two grew in a little strangely. Regardless, these clovers have some unique charm and come heavily discounted."
+          data-price-cad="7.00"
+          data-images="imp51.png, imp53.png, imp54.png, imp55.png"
+          data-etsy="https://www.etsy.com/ca/listing/1895742107/5-imperfect-five-leaf-clovers-genuine"
+          data-tag="">
+          <div class="card-carousel">
+            <button class="card-prev" title="Previous Image">‹</button>
+            <img class="card-image" src="" alt="Imperfect five-leaf clover">
+            <button class="card-next" title="Next Image">›</button>
+          </div>
+          <div class="product-content">
+            <h3>Imperfect 5 Leaf Clover</h3>
+            <div class="price" data-cad="7.00">$7.00 CAD</div>
+            <p class="short-desc">Naturally imperfect five-leaf clover with bite marks and misshapen leaves, laminated.</p>
+            <button class="view-details">View details →</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initialize all product cards
-      const products = document.querySelectorAll('.product');
-      products.forEach(product => {
-        // Get images for this product
-        const imagesSrc = product.dataset.images.split(', ');
-        const carousel = product.querySelector('.card-carousel');
-        const imageElement = carousel.querySelector('.card-image');
-        const prevBtn = carousel.querySelector('.card-prev');
-        const nextBtn = carousel.querySelector('.card-next');
-        
-        // Set up carousel for product cards
-        let currentIndex = 0;
-        
-        // Initialize the first image
-        imageElement.src = imagesSrc[0];
-        
-        // Event listeners for next/prev buttons
-        prevBtn.addEventListener('click', function(e) {
-          e.stopPropagation();
-          currentIndex = (currentIndex - 1 + imagesSrc.length) % imagesSrc.length;
-          imageElement.src = imagesSrc[currentIndex];
-        });
-        
-        nextBtn.addEventListener('click', function(e) {
-          e.stopPropagation();
-          currentIndex = (currentIndex + 1) % imagesSrc.length;
-          imageElement.src = imagesSrc[currentIndex];
-        });
-        
-        // Show modal when clicking on product or view details button
-        product.addEventListener('click', function() {
-          showModal(product);
-        });
-        
-        const viewDetailsBtn = product.querySelector('.view-details');
-        viewDetailsBtn.addEventListener('click', function(e) {
-          e.stopPropagation();
-          showModal(product);
-        });
-      });
-      
-      // Modal functionality
-      const modal = document.getElementById('productModal');
-      const modalTitle = document.getElementById('modalTitle');
-      const modalImage = document.getElementById('modalImage');
-      const modalPrice = document.getElementById('modalPrice');
-      const modalDescription = document.getElementById('modalDescription');
-      const buyButton = document.getElementById('buyButton');
-      const closeBtn = document.querySelector('.close');
-      const prevModalBtn = document.querySelector('.carousel .prev');
-      const nextModalBtn = document.querySelector('.carousel .next');
-      
-      let modalImages = [];
-      let currentModalIndex = 0;
-      
-      function showModal(product) {
-        // Set modal content
-        modalTitle.textContent = product.dataset.title;
-        modalPrice.textContent = product.dataset.price;
-        modalDescription.textContent = product.dataset.description;
-        buyButton.href = product.dataset.etsy;
-        
-        // Set up images for modal carousel
-        modalImages = product.dataset.images.split(', ');
-        currentModalIndex = 0;
-        modalImage.src = modalImages[0];
-        
-        // Show modal with animation
-        modal.style.display = 'block';
-        setTimeout(() => {
-          modal.classList.add('show');
-        }, 10);
-      }
-      
-      // Close modal
-      closeBtn.addEventListener('click', closeModal);
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-          closeModal();
-        }
-      });
-      
+    <!-- Jewelry -->
+    <div class="shop-panel" id="panel-jewelry">
+      <p class="panel-intro">Trinkets and jewellery, each piece holding a preserved, genuine 4-leaf clover. </p>
+      <div class="products">
+        <div class="product"
+          data-title="4 Leaf Clover Jar"
+          data-description="Beautiful real 4 leaf clover pressed and preserved in a small glass jar."
+          data-price-cad="15.00"
+          data-images="newjar.png, jar1.png, jar2.png, jar3.png, jar4.png, jar5.png"
+          data-etsy="https://www.etsy.com/ca/listing/813408667/four-leaf-clover-glass-jar-real"
+          data-tag="Popular">
+          <div class="card-carousel">
+            <button class="card-prev" title="Previous Image">‹</button>
+            <img class="card-image" src="" alt="Four-leaf clover glass jar">
+            <button class="card-next" title="Next Image">›</button>
+          </div>
+          <div class="product-content">
+            <h3>4 Leaf Clover Jar</h3>
+            <div class="price" data-cad="15.00">$15.00 CAD</div>
+            <p class="short-desc">A genuine four-leaf clover pressed and preserved in a small glass jar.</p>
+            <button class="view-details">View details →</button>
+          </div>
+        </div>
 
-     // Change nav background on scroll
-     window.addEventListener('scroll', function() {
-     const nav = document.querySelector('nav');
-     if (window.scrollY > 10) {
-       nav.classList.add('scrolled');
-     } else {
-       nav.classList.remove('scrolled');
-     } 
-   });
+        <div class="product"
+          data-title="Resin Clover Pendant"
+          data-description="Beautiful handcrafted resin pendant featuring a genuine four-leaf clover. Each piece is unique and makes a perfect lucky charm to wear close to your heart."
+          data-price-cad="25.00"
+          data-images="cpen1.png, cpen2.png, cpen3.png, cpen4.png, cpen5.png"
+          data-etsy="https://www.etsy.com/ca/listing/1503895427/real-four-leaf-clover-resin-pendant"
+          data-tag="Popular">
+          <div class="card-carousel">
+            <button class="card-prev" title="Previous Image">‹</button>
+            <img class="card-image" src="" alt="Resin clover pendant">
+            <button class="card-next" title="Next Image">›</button>
+          </div>
+          <div class="product-content">
+            <h3>Resin Clover Pendant</h3>
+            <div class="price" data-cad="25.00">$25.00 CAD</div>
+            <p class="short-desc">Handcrafted pendant with a real four-leaf clover preserved in crystal-clear resin.</p>
+            <button class="view-details">View details →</button>
+          </div>
+        </div>
 
-      function closeModal() {
-        modal.classList.remove('show');
-        setTimeout(() => {
-          modal.style.display = 'none';
-        }, 300);
-      }
-      
-      // Modal carousel navigation
-      prevModalBtn.addEventListener('click', function() {
-        currentModalIndex = (currentModalIndex - 1 + modalImages.length) % modalImages.length;
-        modalImage.src = modalImages[currentModalIndex];
+        <div class="product"
+          data-title="Clover Locket"
+          data-description="A beautiful locket featuring a genuine four-leaf clover charm encased within."
+          data-price-cad="30.00"
+          data-images="cl.png.jpg, cl_1.png.jpg, cl_2.png.jpg, cl1.png, cl2.png, cl3.png, cl4.png"
+          data-etsy="https://www.etsy.com/ca/listing/1396060194/real-four-leaf-clover-pendant-handpicked"
+          data-tag="">
+          <div class="card-carousel">
+            <button class="card-prev" title="Previous Image">‹</button>
+            <img class="card-image" src="" alt="Clover locket">
+            <button class="card-next" title="Next Image">›</button>
+          </div>
+          <div class="product-content">
+            <h3>Clover Locket</h3>
+            <div class="price" data-cad="30.00">$30.00 CAD</div>
+            <p class="short-desc">A beautiful locket featuring a genuine four-leaf clover charm encased within.</p>
+            <button class="view-details">View details →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rarities -->
+    <div class="shop-panel" id="panel-rarities">
+      <p class="panel-intro">Genuine multi-leaf finds — increasingly rare the more leaves they carry.</p>
+      <div class="products">
+        <div class="product"
+          data-title="Five-Leaf Clover - Rare Find"
+          data-description="An extremely rare five-leaf clover, carefully preserved in our special lamination. These are incredibly uncommon finds and are said to bring even more luck than their four-leaf counterparts."
+          data-price-cad="14.00"
+          data-images="new5leaf.png, 5l1.png, 5l2.png, 5l3.png, 5l4.png"
+          data-etsy="https://www.etsy.com/ca/listing/799961972/five-leaf-clover-genuine-hand-picked"
+          data-tag="Rare">
+          <div class="card-carousel">
+            <div class="product-tag tag-rare"><span class="dot"></span>Rare</div>
+            <button class="card-prev" title="Previous Image">‹</button>
+            <img class="card-image" src="" alt="Five-leaf clover">
+            <button class="card-next" title="Next Image">›</button>
+          </div>
+          <div class="product-content">
+            <h3>Five-Leaf Clover</h3>
+            <div class="price" data-cad="14.00">$14.00 CAD</div>
+            <p class="short-desc">An extremely rare five-leaf clover, carefully preserved for exceptional luck.</p>
+            <button class="view-details">View details →</button>
+          </div>
+        </div>
+
+        <div class="product"
+          data-title="Six-Leaf Clover - Ultra Rare"
+          data-description="An incredibly rare six-leaf clover find. These are among the rarest clover mutations and are said to bring extraordinary luck to their owners."
+          data-price-cad="75.00"
+          data-images="sl1.png, sl2.png, sl3.png, sl4.png, sl5.png"
+          data-etsy="https://www.etsy.com/ca/listing/1498786323/real-six-leaf-clover-rare-only-1-genuine"
+          data-tag="Ultra Rare">
+          <div class="card-carousel">
+            <div class="product-tag tag-rare"><span class="dot"></span>Ultra Rare</div>
+            <button class="card-prev" title="Previous Image">‹</button>
+            <img class="card-image" src="" alt="Six-leaf clover">
+            <button class="card-next" title="Next Image">›</button>
+          </div>
+          <div class="product-content">
+            <h3>Six-Leaf Clover</h3>
+            <div class="price" data-cad="75.00">$75.00 CAD</div>
+            <p class="short-desc">Extraordinarily rare six-leaf clover, a true collector's treasure.</p>
+            <button class="view-details">View details →</button>
+          </div>
+        </div>
+
+        <div class="product"
+          data-title="Seven-Leaf Clover - Rare Find"
+          data-description="An extremely rare seven-leaf clover, carefully preserved in our special lamination. These are incredibly rare finds and a true collector's treasure."
+          data-price-cad="100.00"
+          data-images="coming soon.jpg"
+          data-etsy="https://the4leafcloverstore.etsy.com"
+          data-tag="Ultra Rare">
+          <div class="card-carousel">
+            <div class="product-tag tag-rare"><span class="dot"></span>Ultra Rare</div>
+            <button class="card-prev" title="Previous Image">‹</button>
+            <img class="card-image" src="" alt="Seven-leaf clover">
+            <button class="card-next" title="Next Image">›</button>
+          </div>
+          <div class="product-content">
+            <h3>Seven-Leaf Clover</h3>
+            <div class="price" data-cad="100.00">$100.00 CAD</div>
+            <p class="short-desc">Extremely rare seven-leaf clover, carefully preserved for exceptional luck.</p>
+            <button class="view-details">View details →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="height:60px"></div>
+</main>
+
+<!-- ============ OWNER ============ -->
+<main id="page-owner" class="page">
+
+  <div class="shop-banner">
+    <div class="shop-banner-accent"></div>
+    <div class="wrap shop-banner-inner">
+      <div class="eyebrow-clover eyebrow-light">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        Meet the owner
+      </div>
+      <h1>Hi! I'm Taylor!🍀</h1>
+      <p>Every clover in this shop was spotted, picked and preserved by me, in Ontario, Canada.</p>
+    </div>
+  </div>
+
+  <section class="block tight">
+    <div class="wrap sci-grid">
+      <div>
+        <span class="sci-kicker">My story</span>
+        <h2>A strange little talent</h2>
+        <p>I found my first 4 leaf clover in 1st grade playing in the school yard. I remember the exact moment it caught my eye as I was tightrope walking along a concrete barrier separating the schoolyard from the sidewalk. It was the most magical thing I'd ever seen. </p>
+
+<p>I continued to hunt in this little patch for years and would come home with fistfuls of 4-leaf clovers. Soon, I would see 4-leaf clovers everywhere I went. For years I would fill every thick book in my house with pressed clovers, until I got the 10th birthday present every little girl dreams of, a laminator. </p>
+        <p>As the clovers continued to fill books and drawers, my mom suggested I walk down to the local jewellery studio and ask if they'd like to buy some clovers to make into jewellery. So, at 12 years old, I sold 24 laminated 4 leaf clovers at $10 each to the incredible owner of Made You Look Jewellery who gifted them to each of her artists. This was an exuberant amount of money to a 12 year old and I cannot thank her enough for supporting the entreprenurial endeavor of a young child because it was a key factor in what The4LeafCloverStore is today. </p>
+
+<p>I didn't sell any clovers again until I turned 18 in 2020, when, during COVID, clover hunting became a true escape. The piling up clovers, and remembering my successful clover sale 6 years earlier, inspired me to finally open an Etsy store where I could sell my clovers and hopefully share the magic and joy that they bring me, with others. </p>
+
+<p>Over the next 6 years I would reach over 1000 sales on Etsy, sell at various markets and festivals, making incredible friends along the way. I had even been recognized while I was out hunting as "the girl that sells clovers". </p>
+
+<p>I am so thankful for my little business and the places it has taken me. People always ask me if the clovers are truly lucky, and while I can't promise anything, I can say that they have truly made me feel like one of the luckiest people on earth. </p>
+
+      </div>
+    <figure class="owner-video" style="margin: 0; display: flex; align-items: center; justify-content: center;">
+        <video 
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          preload="auto" 
+          controls 
+          aria-label="Taylor at the clover stand"
+          style="width: 100%; height: auto; max-width: 100%; display: block; object-fit: contain">
+          <source src="stand.mp4" type="video/mp4">
+        </video>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block tight" style="background: var(--cream-2);">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="sci-kicker">The stand</span>
+          <h2>My clover stand over the years</h2>
+          <p>The evolution of my clover stand, season by season. </p>
+        </div>
+      </div>
+      <div class="stand-carousel" id="standCarousel" tabindex="0" aria-roledescription="carousel" aria-label="Photos of the clover stand">
+        <div class="stand-viewport">
+          <div class="stand-track">
+
+<div class="stand-slide">
+  <img src="stand_.jpeg" alt="The clover stand, photo 0 of 9">
+  <span class="stand-year">2026</span>
+</div>
+
+<div class="stand-slide">
+  <img src="stand1.jpg" alt="The clover stand, photo 1 of 9">
+  <span class="stand-year">2026</span>
+</div>
+
+<div class="stand-slide">
+  <img src="stand2.jpg" alt="The clover stand, photo 2 of 9" loading="lazy">
+  <span class="stand-year">2026</span>
+</div>
+
+<div class="stand-slide">
+  <img src="stand3.jpg" alt="The clover stand, photo 3 of 9" loading="lazy">
+  <span class="stand-year">2026</span>
+</div>
+
+<div class="stand-slide">
+  <img src="stand4.jpg" alt="The clover stand, photo 4 of 9" loading="lazy">
+  <span class="stand-year">2025</span>
+</div>
+
+<div class="stand-slide">
+  <img src="stand5.jpg" alt="The clover stand, photo 5 of 9" loading="lazy">
+  <span class="stand-year">2025</span>
+</div>
+
+<div class="stand-slide">
+  <img src="stand6.jpg" alt="The clover stand, photo 6 of 9" loading="lazy">
+  <span class="stand-year">2024</span>
+</div>
+
+<div class="stand-slide">
+  <img src="stand7.jpg" alt="The clover stand, photo 7 of 9" loading="lazy">
+  <span class="stand-year">2024</span>
+</div>
+
+<div class="stand-slide">
+  <img src="stand8.jpg" alt="The clover stand, photo 8 of 9" loading="lazy">
+  <span class="stand-year">2023</span>
+</div>
+
+<div class="stand-slide">
+  <img src="stand9.jpg" alt="The clover stand, photo 9 of 9" loading="lazy">
+  <span class="stand-year">2022</span>
+</div>
+          </div>
+        </div>
+        <button class="stand-btn stand-prev" type="button" aria-label="Previous photo">‹</button>
+        <button class="stand-btn stand-next" type="button" aria-label="Next photo">›</button>
+        <div class="stand-footer">
+          <div class="stand-dots"></div>
+          <span class="stand-count">1 / 9</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tight">
+    <div class="wrap">
+      <div class="video-placeholder" style="margin-top:0;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="M17 10l5-3v10l-5-3"/></svg>
+        <strong>Video: finding &amp; laminating clovers, coming soon</strong>
+        <span style="max-width:34ch;">A short behind-the-scenes video of a real clover hunt and the lamination process will live here.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tight">
+    <div class="wrap">
+      <div class="story">
+        <div class="story-badge">
+          <img src="founder_image.jpg" alt="Taylor">
+        </div>
+        <div>
+          <blockquote>"These magical little plants bring me so much joy, and I hope they can bring you some too."</blockquote>
+          — Taylor, founder
+          <div style="margin-top:18px;">
+            <button class="cta-pill" onclick="goTo('shop')">Shop the collection</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ LEARN ============ -->
+<main id="page-learn" class="page">
+
+  <div class="shop-banner learn-banner">
+    <div class="shop-banner-accent"></div>
+    <div class="wrap shop-banner-inner learn-banner-inner">
+      <div class="eyebrow-clover eyebrow-light">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M3 20h.01M7 20l7-7-3-3-7 7v3h3z"/></svg>
+        The science behind 4-leaf clovers
+      </div>
+      <h1>4-Leaf Clover Biology!</h1>
+      <p>What exactly is "clover"? Why do they sometimes grow a 4th leaf (or more!)? How rare are they, and what are shops selling instead of <i>real</i> 4-leaf clover?</p>
+      <a class="tiktok-card" href="https://www.tiktok.com/@the4leafcloverstore/video/7528555757671861560" target="_blank" rel="noopener">
+        <span class="tiktok-thumb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="tiktok-label"><strong>Watch me discuss the fake clover that most shops sell.</strong><span>On TikTok ↗</span></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- the plant -->
+  <section class="block tight">
+    <div class="wrap sci-grid">
+      <div>
+        <span class="sci-kicker">The plant</span>
+        <h2>Trifolium repens</h2>
+        <p class="latin-lg">White clover</p>
+        <p><i>Trifolium repens</i>, also known as white clover, is the most widely grown clover and is considered "true clover" when discussing 4-leaf clovers. The plant is aptly named, as <i>trifolium</i> means 3 leaves, and <i>repens</i> means "creeping" or "crawling", describing the 3-leafed, vine-like growth of the plant, which is actually part of the pea family (Fabaceae). They are known as white clover for the white flowers they produce throughout the summer. Most people don't realize that clover grows along creeping stems called stolons, rather than as individual plants sprouting from the ground.<sup><a href="#ref1">1</a></sup></p>
+        <p>White clover is native to Europe, North Africa and western Asia, and is now common across North and South America, Australia and New Zealand.<sup><a href="#ref1">1</a></sup> It is also an excellent nitrogen fixer: bacteria living in its roots pull nitrogen from the air and fertilize the soil, making it a useful companion plant in pastures and crops.<sup><a href="#ref2">2</a></sup></p>
+      </div>
+      <figure class="sci-figure">
+        <img src="trepens.jpg" alt="Botanical illustration of white clover, Trifolium repens">
+        <figcaption><em>Trifolium repens</em>: creeping stem, 3 leaves at the end of each stalk with a pale V-shaped mark on each leaflet, and a round white flower head.
+By <a href="https://en.wikipedia.org/wiki/en:Am%C3%A9d%C3%A9e_Masclef" class="extiw" title="w:en:Amédée Masclef"><span title="botanist">Amédée Masclef</span></a> - Atlas des plantes de France. 1891, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=5767733">Link</a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- the mutation -->
+  <section class="block tight" style="background: var(--cream-2);">
+    <div class="wrap sci-grid">
+      <figure class="sci-figure">
+        <img src="scienceclover.jpg" alt="White clover stem with a fourth leaflet">
+        <figcaption>Trifolium repens clover stem with an extra 4th leaf, slightly smaller than the other three.</figcaption>
+      </figure>
+      <div>
+        <span class="sci-kicker">The mutation</span>
+        <h2>Where the 4th leaf comes from</h2>
+        <p>A four-leaf clover isn't a different plant or a different species. It's the exact same <em>Trifolium repens</em>, where one leaf has grown an extra fourth leaflet. White clover's genetics are unusually complicated: it carries two full sets of chromosomes inherited from two different ancestor species (it's an allotetraploid), so traits don't follow simple inheritance patterns.<sup><a href="#ref3">3</a></sup> Researchers at the University of Georgia mapped the extra-leaflet ("multifoliolate") trait and found it is controlled by two recessive genes, which is why it shows up so rarely.<sup><a href="#ref4">4</a></sup> Growing conditions likely play a role too, so a plant carrying the genes won't necessarily produce a 4-leaf clover every season.</p>
+        <p>Because clover spreads clonally along its creeping stems, one patch may all be the same genetic plant.<sup><a href="#ref5">5</a></sup> So, if you spot a 4-leaf clover, keep looking nearby to see if you can find any others.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- the odds -->
+  <section class="odds-strip">
+    <div class="wrap" style="display:grid; grid-template-columns:auto 1fr; gap:40px; align-items:center;">
+      <div class="big-odds">1 in 5,076</div>
+      <p>The number you've probably heard is "1 in 10,000" for the rarity of a clover. A 2017 survey that counted roughly 5.7 million white clovers across six European countries put the real average closer to 1 in 5,076.<sup><a href="#ref6">6</a></sup> Still, definitely a rarity. This is the number behind every clover I find, and every clover in my shop. Having scoured lawns, fields and wherever else grass grows, I can say that I've probably looked at millions of individual clovers in my lifetime to find the number of 4 leaf clovers I have.</p>
+    </div>
+  </section>
+
+  <!-- more than four -->
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>More than 4 leaves?</h2>
+        <p>Five-leaf clovers and beyond come from the same trait, and each extra leaflet makes them much rarer: the same 2017 survey estimated about 1 in 24,000 for five leaves and 1 in 312,000 for six.<sup><a href="#ref6">6</a></sup> Here's the world record for leaves on a clover compared to my personal record!</p>
+      </div>
+      <div class="record-row">
+        <div class="record-card world">
+          <div class="num">63 leaves</div>
+          <p>The Guinness World Record for most leaves on a clover belongs to Yoshiharu Watanabe of Nasushiobara, Japan, who spent years cross-pollinating clover in his garden and found a 63-leaf stem in 2023.<sup><a href="#ref7">7</a></sup></p>
+        </div>
+        <div class="record-card mine">
+          <div class="num">10 leaves</div>
+          <p>My own personal record is a 10 leaf clover I found while I was walking along Lake Ontario. Interestingly, I've found three 8-leaf clovers, and a few 7s and 6s, but skipped 9 leaves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- the imposter -->
+  <section class="block tight" style="background: var(--cream-2);">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>The fake plant most shops actually sell</h2>
+        <p>A lot of what gets marketed online as a "real four-leaf clover" is absolutely not <em>Trifolium repens</em>. It's usually <em>Marsilea quadrifolia</em> or <em>Marsilea polycarpa</em>. This is an aquatic fern, not a clover, that grows near ponds and streams and naturally produces four wedge-shaped leaflets on every single leaf, every time.<sup><a href="#ref9">9</a></sup><sup><a href="#ref10">10</a></sup> Because it's always four-leafed, it's cheap and easy to grow and sell.</p>
+      </div>
+      <div class="imposter-grid">
+        <div class="imposter-card real">
+          <span class="imposter-tag yes">What I sell</span>
+          <figure class="sci-figure">
+            <img src="3leaf.jpg" alt="Genuine white clover leaves">
+          </figure>
+          <h3>Genuine white clover</h3>
+          <p class="latin-lg">Trifolium repens</p>
+          <ul>
+            <li>Normally 3 leaflets per leaf.<sup><a href="#ref1">1</a></sup></li>
+            <li>Rounded or heart-shaped leaflets; the fourth is often a slightly different size than the other three, and there is usually (but not always) a pale V-shaped mark on each leaflet.<sup><a href="#ref8">8</a></sup></li>
+            <li>Grows on land, creeping amongst the grass.<sup><a href="#ref1">1</a></sup></li>
+          </ul>
+        </div>
+        <div class="imposter-card">
+          <span class="imposter-tag no">Not a clover</span>
+          <figure class="sci-figure">
+            <img src="Marsilea.jpg" alt="Marsilea water fern leaves">
+          </figure>
+          <h3>Water clover (a fern)</h3>
+          <p class="latin-lg">Marsilea quadrifolia / polycarpa</p>
+          <ul>
+            <li>Always grows 4 leaflets.<sup><a href="#ref9">9</a></sup></li>
+            <li>Leaflets are plain wedge-shaped fans, uniform in size.</li>
+            <li>An aquatic fern that grows in ponds, streams and wetlands and reproduces by spores, not flowers.<sup><a href="#ref10">10</a></sup></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tight">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>Are these clovers really real? <span class="plus">+</span></summary>
+          <p>Yes! Every clover is genuine <em>Trifolium repens</em>, found growing wild in Ontario, then pressed and laminated to preserve it.</p>
+        </details>
+        <details>
+          <summary>How can I tell if a clover I bought elsewhere is real? <span class="plus">+</span></summary>
+          <p>Check the leaf shape, uniformity and size. A genuine four-leaf clover has rounded leaflets, often with a pale V-mark, and the fourth leaflet is usually a bit smaller than the other three. If every leaflet is identical, wedge-shaped, and has no white V-mark, it's very likely <em>Marsilea</em>, the water fern, not a clover at all.</p>
+        </details>
+        <details>
+          <summary>How do you preserve them? <span class="plus">+</span></summary>
+          <p>Once I pick a clover, I press it in tissue in a book to flatten and dry it out, preserving its shape and preventing rotting. Then, I either laminate it or use it in a jewellery item or trinket.</p>
+        </details>
+        <details>
+          <summary>Why are some clovers discounted? <span class="plus">+</span></summary>
+          <p>Sometimes, a 4 leaf clover meets the wrong end of a lawnmower, or becomes a snack for a passing insect. When a clover looks less than perfect, I list it at a discounted price, but they are still the same magical little plants.</p>
+        </details>
+        <details>
+          <summary>Do you ship outside Canada? <span class="plus">+</span></summary>
+          <p>Yes, orders ship worldwide from Ontario. Check the Etsy listing for current shipping times to your country.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tight refs-section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>References</h2>
+      </div>
+      <ol class="ref-list">
+        <li id="ref1">Burdon, J. J. (1983). Biological Flora of the British Isles: <em>Trifolium repens</em> L. <em>Journal of Ecology</em>, 71(1), 307–330.</li>
+        <li id="ref2">Carlsson, G., &amp; Huss-Danell, K. (2003). Nitrogen fixation in perennial forage legumes in the field. <em>Plant and Soil</em>, 253, 353–372.</li>
+        <li id="ref3">Griffiths, A. G., et al. (2019). Breaking free: the genomics of allopolyploidy-facilitated niche expansion in white clover. <em>The Plant Cell</em>, 31(7), 1466–1487.</li>
+        <li id="ref4">Tashiro, R. M. (2009). <em>From the field to the flowerbed to the lab: ornamental white clover breeding and leaf trait mapping</em> [MSc thesis, University of Georgia]. <a href="https://openscholar.uga.edu/record/13333/files/tashiro_rebecca_m_200905_ms.pdf" target="_blank" rel="noopener">openscholar.uga.edu</a></li>
+        <li id="ref5">Tashiro, R. M., Bouton, J. H., &amp; Parrott, W. A. (2009). 'Frosty Morning', 'Patchwork Quilt', 'Irish Mist', and 'Pistachio Ice Cream' ornamental white clover (<em>Trifolium repens</em> L.). <em>HortScience</em>, 44(6), 1779–1782. <a href="https://parrottlab.uga.edu/files/2024/01/Tashiroetal2009.pdf" target="_blank" rel="noopener">parrottlab.uga.edu</a></li>
+        <li id="ref6">Share the Luck (2017). Survey of approximately 5.7 million clovers in six European countries. <span class="ref-note">Not peer-reviewed; reported in</span> "How rare are four leaved clovers, really?" <em>IFLScience</em> (2023). <a href="https://www.iflscience.com/how-rare-are-four-leaved-clovers-really-68958" target="_blank" rel="noopener">iflscience.com</a></li>
+        <li id="ref7">Guinness World Records (2023). Most leaves on a clover: 63, Yoshiharu Watanabe, Nasushiobara, Japan.</li>
+        <li id="ref8">Brewbaker, J. L. (1955). V-leaf markings of white clover. <em>Journal of Heredity</em>, 46(3), 115–123.</li>
+        <li id="ref9">Johnson, D. M. (1986). Systematics of the New World species of <em>Marsilea</em> (Marsileaceae). <em>Systematic Botany Monographs</em>, 11, 1–87.</li>
+        <li id="ref10">Nagalingum, N. S., Schneider, H., &amp; Pryer, K. M. (2007). Molecular phylogenetic relationships and morphological evolution in the heterosporous fern genus <em>Marsilea</em>. <em>Systematic Botany</em>, 32(1), 16–25.</li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<!-- ============ MODAL ============ -->
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="modalTitle">Product Title</h2>
+      <button class="close" aria-label="Close">&times;</button>
+    </div>
+    <div class="carousel">
+      <button class="prev" title="Previous Image">‹</button>
+      <div class="carousel-images">
+        <img id="modalImage" src="" alt="Product image">
+      </div>
+      <button class="next" title="Next Image">›</button>
+    </div>
+    <div class="product-info">
+      <span id="modalPrice">$0.00</span>
+      <div id="modalDescription" class="description">Product description goes here...</div>
+      <div class="product-meta">
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          <span>100% Genuine Four-Leaf Clover</span>
+        </div>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="13" height="10" rx="1"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7" cy="19" r="1.6"/><circle cx="18" cy="19" r="1.6"/></svg>
+          <span>Ships Worldwide from Ontario</span>
+        </div>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/></svg>
+          <span>Satisfaction Guaranteed</span>
+        </div>
+      </div>
+      <a id="buyButton" href="#" class="cta-pill" target="_blank" rel="noopener">Buy on Etsy</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-logo"><img src="websitetitle.png" alt="The 4 Leaf Clover Store logo"></div>
+      <p>Bringing authentic good luck to people worldwide, one hand-picked clover at a time.</p>
+      <div class="social-row">
+        <a href="https://www.instagram.com/the4leafcloverstore/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@the4leafcloverstore?lang=en" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v11.5a3.5 3.5 0 11-3-3.46"/><path d="M14 3c0 2.5 2 4.5 4.5 4.5"/></svg>
+        </a>
+        <a href="https://the4leafcloverstore.etsy.com" target="_blank" rel="noopener" aria-label="Etsy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6 4.4 2.4 7.4-6.4-4.6L5.6 21l2.4-7.4-6-4.4h7.6z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>The4LeafCloverStore@gmail.com</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 6 6 10 6 13a6 6 0 0012 0c0-3-2-7-6-11z"/></svg>Ontario, Canada</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Response time: 1–2 business days</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Quick links</h4>
+      <nav style="display:flex; flex-direction:column;">
+        <a href="#" onclick="goTo('shop','laminated'); return false;">Laminated Clovers</a>
+        <a href="#" onclick="goTo('shop','jewelry'); return false;">Jewellery</a>
+        <a href="#" onclick="goTo('shop','rarities'); return false;">Rarities</a>
+        <a href="#" onclick="goTo('shop','quirky'); return false;">Imperfect Clovers</a>
+        <a href="#" onclick="goTo('owner'); return false;">About Us</a>
+      </nav>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; 2026 The 4 Leaf Clover Store. All rights reserved.</span>
+    <span>Made with 🍀 in Ontario</span>
+  </div>
+</footer>
+
+<script>
+  // ---------- routing ----------
+  function goTo(route, tab) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + route).classList.add('active');
+    document.querySelectorAll('.navlink').forEach(b => {
+      if (b.dataset.route === route) b.setAttribute('aria-current', 'page');
+      else b.removeAttribute('aria-current');
+    });
+    window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+    document.getElementById('mainnav').classList.remove('mobile-open');
+    if (route === 'shop' && tab) showTab(tab);
+    history.replaceState(null, '', '#' + route);
+    const ownerVid = document.querySelector('#page-owner video');
+    if (ownerVid) { route === 'owner' ? ownerVid.play().catch(() => {}) : ownerVid.pause(); }
+  }
+  function showTab(tab) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+    document.querySelectorAll('.shop-panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + tab));
+  }
+
+  // ---------- pricing (CAD only) ----------
+  function formatPrice(cad) {
+    return '$' + cad.toFixed(2) + ' CAD';
+  }
+
+  document.getElementById('menuToggle').addEventListener('click', () => {
+    document.getElementById('mainnav').classList.toggle('mobile-open');
+  });
+
+  // initial route from hash
+  (function initRoute(){
+    const hash = window.location.hash.replace('#','');
+    if (['home','shop','owner','learn'].includes(hash)) goTo(hash);
+    else goTo('home');
+  })();
+
+  // ---------- product cards / modal ----------
+  function setImgSrc(imgEl, src) {
+    imgEl.classList.remove('img-missing');
+    imgEl.onerror = function () {
+      imgEl.onerror = null;
+      imgEl.removeAttribute('src');
+      imgEl.classList.add('img-missing');
+    };
+    imgEl.src = src;
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const products = document.querySelectorAll('.product');
+    products.forEach(product => {
+      const imagesSrc = product.dataset.images.split(', ');
+      const carousel = product.querySelector('.card-carousel');
+      const imageElement = carousel.querySelector('.card-image');
+      const prevBtn = carousel.querySelector('.card-prev');
+      const nextBtn = carousel.querySelector('.card-next');
+      let currentIndex = 0;
+      setImgSrc(imageElement, imagesSrc[0]);
+
+      prevBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + imagesSrc.length) % imagesSrc.length;
+        setImgSrc(imageElement, imagesSrc[currentIndex]);
       });
-      
-      nextModalBtn.addEventListener('click', function() {
-        currentModalIndex = (currentModalIndex + 1) % modalImages.length;
-        modalImage.src = modalImages[currentModalIndex];
+      nextBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % imagesSrc.length;
+        setImgSrc(imageElement, imagesSrc[currentIndex]);
+      });
+      product.addEventListener('click', function() { showModal(product); });
+      product.querySelector('.view-details').addEventListener('click', function(e) {
+        e.stopPropagation();
+        showModal(product);
       });
     });
-  </script>
+
+    const modal = document.getElementById('productModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalImage = document.getElementById('modalImage');
+    const modalPrice = document.getElementById('modalPrice');
+    const modalDescription = document.getElementById('modalDescription');
+    const buyButton = document.getElementById('buyButton');
+    const closeBtn = document.querySelector('.close');
+    const prevModalBtn = document.querySelector('.carousel .prev');
+    const nextModalBtn = document.querySelector('.carousel .next');
+    let modalImages = [];
+    let currentModalIndex = 0;
+
+    function showModal(product) {
+      modalTitle.textContent = product.dataset.title;
+      modalPrice.textContent = formatPrice(parseFloat(product.dataset.priceCad));
+      modalDescription.textContent = product.dataset.description;
+      buyButton.href = product.dataset.etsy;
+      modalImages = product.dataset.images.split(', ');
+      currentModalIndex = 0;
+      setImgSrc(modalImage, modalImages[0]);
+      modal.style.display = 'block';
+      setTimeout(() => modal.classList.add('show'), 10);
+    }
+    function closeModal() {
+      modal.classList.remove('show');
+      setTimeout(() => { modal.style.display = 'none'; }, 250);
+    }
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+    prevModalBtn.addEventListener('click', function() {
+      currentModalIndex = (currentModalIndex - 1 + modalImages.length) % modalImages.length;
+      setImgSrc(modalImage, modalImages[currentModalIndex]);
+    });
+    nextModalBtn.addEventListener('click', function() {
+      currentModalIndex = (currentModalIndex + 1) % modalImages.length;
+      setImgSrc(modalImage, modalImages[currentModalIndex]);
+    });
+  });
+
+  // ---------- stand carousel ----------
+  (function standCarousel() {
+    const root = document.getElementById('standCarousel');
+    if (!root) return;
+    const track = root.querySelector('.stand-track');
+    const slides = track.children;
+    const dotsWrap = root.querySelector('.stand-dots');
+    const counter = root.querySelector('.stand-count');
+    let i = 0;
+
+    for (let n = 0; n < slides.length; n++) {
+      const d = document.createElement('button');
+      d.type = 'button';
+      d.className = 'stand-dot';
+      d.setAttribute('aria-label', 'Show photo ' + (n + 1));
+      d.addEventListener('click', () => go(n));
+      dotsWrap.appendChild(d);
+    }
+
+    function go(n) {
+      i = (n + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (i * 100) + '%)';
+      [...dotsWrap.children].forEach((d, k) => d.setAttribute('aria-current', k === i ? 'true' : 'false'));
+      counter.textContent = (i + 1) + ' / ' + slides.length;
+    }
+
+    root.querySelector('.stand-prev').addEventListener('click', () => go(i - 1));
+    root.querySelector('.stand-next').addEventListener('click', () => go(i + 1));
+    root.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') go(i - 1);
+      if (e.key === 'ArrowRight') go(i + 1);
+    });
+
+    let x0 = null;
+    root.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', e => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) go(dx < 0 ? i + 1 : i - 1);
+      x0 = null;
+    });
+
+    go(0);
+  })();
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
