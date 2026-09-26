@@ -4,6 +4,16 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>The 4 Leaf Clover Store — Genuine Hand-Picked Four-Leaf Clovers</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SRR0NBJBCE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // page views are sent from goTo() so each section (Shop, Learn, Map...) counts separately
+  gtag('config', 'G-SRR0NBJBCE', { send_page_view: false });
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
@@ -1358,7 +1368,7 @@
         <button class="cat-tile" onclick="goTo('shop','jewelry')">
           <img class="cat-tile-photo" src="newjar.png" alt="Four-leaf clover jewellery and jar" onerror="this.onerror=null;this.removeAttribute('src');this.classList.add('img-missing')">
           <h3>Jewellery &amp; Trinkets</h3>
-          <p>Lockets, buttons and trinkets</p>
+          <p>Lockets, keychains, buttons and trinkets</p>
         </button>
         <button class="cat-tile" onclick="goTo('shop','rarities')">
           <img class="cat-tile-photo" src="new5leaf.png" alt="Rare five-leaf clover" onerror="this.onerror=null;this.removeAttribute('src');this.classList.add('img-missing')">
@@ -1559,7 +1569,6 @@
     <div class="shop-panel" id="panel-jewelry">
       <p class="panel-intro">Trinkets and jewellery, each piece holding a preserved, genuine 4-leaf clover. </p>
       <div class="products">
-
         <div class="product"
           data-title="Clover Locket"
           data-description="A beautiful locket featuring a genuine four-leaf clover charm encased within."
@@ -1579,10 +1588,6 @@
             <button class="view-details">View details →</button>
           </div>
         </div>
-
-
-
-
         <div class="product"
           data-title="4 Leaf Clover Jar"
           data-description="Beautiful real 4 leaf clover pressed and preserved in a small glass jar."
@@ -1611,12 +1616,12 @@
           data-tag="">
           <div class="card-carousel">
             <button class="card-prev" title="Previous Image">‹</button>
-            <img class="card-image" src="" alt="Clover locket">
+            <img class="card-image" src="" alt="Four-leaf clover keychain">
             <button class="card-next" title="Next Image">›</button>
           </div>
           <div class="product-content">
-            <h3>Clover Locket</h3>
-            <div class="price" data-cad="30.00">$30.00 CAD</div>
+            <h3>4-Leaf Clover Keychain</h3>
+            <div class="price" data-cad="15.00">$15.00 CAD</div>
             <p class="short-desc">A beautiful real 4-leaf clover preserved in a durable acrylic keychain.</p>
             <button class="view-details">View details →</button>
           </div>
@@ -1635,7 +1640,7 @@
           </div>
           <div class="product-content">
             <h3>4-Leaf Clover Button</h3>
-            <div class="price" data-cad="25.00">$10.00 CAD</div>
+            <div class="price" data-cad="10.00">$10.00 CAD</div>
             <p class="short-desc">Genuine 4-leaf clover preserved within a button pin.</p>
             <button class="view-details">View details →</button>
           </div>
@@ -2335,6 +2340,17 @@ By <a href="https://en.wikipedia.org/wiki/en:Am%C3%A9d%C3%A9e_Masclef" class="ex
     const ownerVid = document.querySelector('#page-owner video');
     if (ownerVid) { route === 'owner' ? ownerVid.play().catch(() => {}) : ownerVid.pause(); }
     if (route === 'map') showCloverMap();
+    trackPage(route);
+  }
+  const PAGE_TITLES = { home: 'Home', shop: 'Shop', owner: 'Meet the Owner', learn: 'Learn About Clovers', map: 'Clover Map' };
+  let lastTracked = null;
+  function trackPage(route) {
+    if (route === lastTracked || typeof gtag !== 'function') return;
+    lastTracked = route;
+    gtag('event', 'page_view', {
+      page_title: PAGE_TITLES[route] + ' | The 4 Leaf Clover Store',
+      page_location: location.origin + location.pathname + '#' + route
+    });
   }
   function showTab(tab) {
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
@@ -2413,6 +2429,7 @@ By <a href="https://en.wikipedia.org/wiki/en:Am%C3%A9d%C3%A9e_Masclef" class="ex
       modalPrice.textContent = formatPrice(parseFloat(product.dataset.priceCad));
       modalDescription.textContent = product.dataset.description;
       buyButton.href = product.dataset.etsy;
+      buyButton.dataset.product = product.dataset.title;
       modalImages = product.dataset.images.split(', ');
       currentModalIndex = 0;
       setImgSrc(modalImage, modalImages[0]);
@@ -2423,6 +2440,12 @@ By <a href="https://en.wikipedia.org/wiki/en:Am%C3%A9d%C3%A9e_Masclef" class="ex
       modal.classList.remove('show');
       setTimeout(() => { modal.style.display = 'none'; }, 250);
     }
+    buyButton.addEventListener('click', () => {
+      if (typeof gtag === 'function') gtag('event', 'etsy_click', { product: buyButton.dataset.product, location: 'product popup' });
+    });
+    document.querySelectorAll('a[href*="etsy.com"]:not(#buyButton)').forEach(a => a.addEventListener('click', () => {
+      if (typeof gtag === 'function') gtag('event', 'etsy_click', { product: 'Shop homepage', location: a.closest('footer') ? 'footer' : a.closest('header') ? 'header' : 'page' });
+    }));
     closeBtn.addEventListener('click', closeModal);
     modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
     prevModalBtn.addEventListener('click', function() {
