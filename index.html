@@ -1196,6 +1196,29 @@
   .leaflet-control-attribution { font-size: 10px; }
   #cloverMap .leaflet-tile-pane { filter: sepia(0.35) saturate(1.3) hue-rotate(45deg) brightness(1.02); }
 
+  /* ---------- reviews (home) ---------- */
+  .review-grid { columns: 3 300px; column-gap: 20px; }
+  .review {
+    break-inside: avoid;
+    margin: 0 0 20px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 22px 24px 20px;
+    box-shadow: 0 16px 30px -26px rgba(35,48,31,0.35);
+  }
+  .stars, .stars-inline { color: #C98A2C; letter-spacing: 2px; }
+  .stars { font-size: 0.95rem; margin-bottom: 6px; }
+  .review blockquote {
+    margin: 0 0 14px;
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .review figcaption { font-weight: 700; font-size: 0.9rem; color: var(--clover-deep); }
+  .review figcaption span { font-weight: 500; color: var(--ink-soft); }
+
   /* ---------- responsive ---------- */
   @media (max-width: 880px) {
     nav.mainnav { display: none; }
@@ -1262,6 +1285,17 @@
       margin-top: 6px;
       padding-top: 14px !important;
     }
+  }
+  @media (max-width: 640px) {
+    .review-grid {
+      columns: auto;
+      display: flex; gap: 14px; align-items: flex-start;
+      overflow-x: auto; scroll-snap-type: x mandatory;
+      margin: 0 -28px; padding: 0 28px 10px;
+      scrollbar-width: none;
+    }
+    .review-grid::-webkit-scrollbar { display: none; }
+    .review { flex: 0 0 84%; scroll-snap-align: center; margin: 0; }
   }
   @media (max-width: 560px) {
     .cat-grid { grid-template-columns: 1fr; }
@@ -1409,6 +1443,69 @@
       </div>
     </div>
   </section>
+
+  <section class="block tight reviews-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="sci-kicker">Reviews</span>
+          <h2>Where the luck ended up</h2>
+          <p><span class="stars-inline">★★★★★</span> 4.7 average from 260 reviews on Etsy. Here are a few of my favourite stories.</p>
+        </div>
+        <a class="section-link" href="https://the4leafcloverstore.etsy.com#reviews" target="_blank" rel="noopener">Read every review on Etsy ↗</a>
+      </div>
+      <div class="review-grid">
+        <figure class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>I am so happy with these!  My brother loved four leaf clovers and I plan to hand these out to family at his Celebration of Life.  He would have loved these.  ❤️</blockquote>
+          <figcaption>Carolyn <span>· 2025</span></figcaption>
+        </figure>
+        <figure class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>Wow. This is a special gift for my partner on our elopement day who calls me his 5 leaf clover. Was only expecting one and got two. Very special</blockquote>
+          <figcaption>Emily <span>· 2024</span></figcaption>
+        </figure>
+        <figure class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>Customer service was great! When my first clover didn’t come (lost in the Mail I assume) they promptly sent me another! My wedding anniversary is on leap day so this was a very special gift to give my husband! Thank you so much!</blockquote>
+          <figcaption>Tricia <span>· 2024</span></figcaption>
+        </figure>
+        <figure class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>Exactly as described!  Bought it for my grandson after a discussion on four leaf clovers.  He told us he was going to &quot;have good luck from now on!&quot;</blockquote>
+          <figcaption>Tracy <span>· 2022</span></figcaption>
+        </figure>
+        <figure class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>I bought this for my friend’s birthday and she said it’s her first four leaf clover, even though she’s Irish! She loves it</blockquote>
+          <figcaption>Kell <span>· 2024</span></figcaption>
+        </figure>
+        <figure class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>Bought for a kindergarten class. Absolutely a huge hit!! 🤍 The seller was so sweet and helpful. Will definitely be buying again!!</blockquote>
+          <figcaption>Nicola <span>· 2025</span></figcaption>
+        </figure>
+        <figure class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>I love this clover very much! The bottle it comes in is especially cute, and its easy to display it anywhere in my home. It&#x27;s a 100% natural 4 leaf clover as it looks like a cute little insect enjoyed nibbling on one of the leaves lol :)</blockquote>
+          <figcaption>Alexandra <span>· 2022</span></figcaption>
+        </figure>
+        <figure class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>Taylor is incredible, great communication and quick delivery. Highly recommend the clovers as a keep sake, most of my friends wanted to get one for their kids to hopefully bring them some luck in this crazy world.</blockquote>
+          <figcaption>Patrick <span>· 2024</span></figcaption>
+        </figure>
+        <figure class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>Paid for 2 and got given 4, top quality customer service such a sweetheart for sharing all of the good fortune..
+HIGHLY RECCOMENDED go get it guys you won&#x27;t regret it✨️💗
+Share the magic of love around n give backk</blockquote>
+          <figcaption>Marie <span>· 2025</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
 
   <section class="block tight">
     <div class="wrap">
